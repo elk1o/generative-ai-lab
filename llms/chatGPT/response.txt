@@ -1,0 +1,14 @@
+*************************
+Starting firt ChatGPT api call script
+Question: ¿Puedes decirme que agente de IA eres? Es mi primera llamada remota de API de la IA
+Answer: Sí: soy **ChatGPT**, un asistente de IA de **OpenAI**.
+
+Si quieres, también puedo ayudarte a identificar:
+- **qué modelo exacto** estás usando en tu llamada,
+- **cómo leer la respuesta de la API**,
+- o darte un ejemplo mínimo en **Python / JavaScript / cURL** para tu primera integración.
+
+Si me pegas tu request, te digo qué estás llamando y cómo probarlo.
+
+Ending first api call script
+***********************
