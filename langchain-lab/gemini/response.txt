@@ -1,0 +1,25 @@
+*****************
+First string concat with prompt templates, multiple variables
+*****************
+El mejor jugador de baloncesto del mundo es Nikola Jokic
+
+*****************
+Second string concat with prompt templates, multiple variables
+*****************
+El mejor jugador de baloncesto del mundo es Nikola Jokic y juega en el equipo Denver Nuggets de la liga NBA
+
+*****************
+Third string concat with prompt templates, enriched by Gemini call
+*****************
+¡Hola! Como experto en estadísticas de la NBA, aquí tienes los números exactos de Nikola Jokić en la última temporada (**2023-2024**):
+
+* **Temporada Regular:** Promedió **26.4 puntos por partido** en 79 encuentros disputados.
+* **Playoffs:** Elevó su nivel y promedió **28.7 puntos por partido** en los 12 juegos que disputó.
+
+Para darte el contexto completo de la majestuosa temporada que firmó (y que le valió para ganar su **tercer premio MVP** de la NBA):
+
+* **Rebotes:** 12.4 por partido.
+* **Asistencias:** 9.0 por partido.
+* **Efectividad en tiros de campo:** 58.3%.
+
+¿Necesitas algún otro dato específico sobre su tiro, sus dobles-dobles o sus métricas avanzadas?

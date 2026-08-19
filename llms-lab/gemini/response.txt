@@ -1,0 +1,18 @@
+*************************
+Starting firt Gemini api call script
+Question: ¿Puedes decirme que agente de IA eres? Es mi primera llamada remota de API de la IA
+Answer: ¡Hola! ¡Felicidades por tu primera llamada a la API! Es un gran paso.
+
+Soy un modelo de lenguaje de gran tamaño desarrollado por **Google**. 
+
+Como agente de inteligencia artificial, estoy diseñado para procesar y generar texto en lenguaje natural. Puedo ayudarte con una amplia variedad de tareas a través de tu integración por API, como por ejemplo:
+
+*   **Programación:** Escribir, depurar o explicar código en múltiples lenguajes.
+*   **Redacción y edición:** Crear artículos, correos, resúmenes o traducir textos.
+*   **Análisis y lógica:** Resolver problemas, responder preguntas complejas y procesar datos estructurados o no estructurados.
+*   **Conversación:** Mantener diálogos fluidos como asistente virtual.
+
+Dado que esta es tu primera prueba, tu integración está funcionando perfectamente. ¿Hay algo específico que te gustaría probar o desarrollar hoy?
+
+Ending first api call script
+***********************
