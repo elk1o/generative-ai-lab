@@ -1,8 +1,8 @@
-# LLM API Integration
+# Generative AI Lab
 
-This project contains a set of practical examples for integrating Python applications with large language model APIs. The repository focuses on API communication, environment configuration, and secure key management, using OpenAI and Google Gemini as reference providers.
+This project contains practical Python examples for working with large language models. It focuses on API communication, environment configuration, prompt templates, and secure key management, with Google Gemini as the current provider.
 
-The goal is to build a base clear and reproducible foundation for experimenting with LLMs and understanding how modern AI services are consumed from code.
+The goal is to provide a clear and reproducible foundation for experimenting with generative AI and understanding how modern model integrations are consumed from code.
 
 ## Project overview
 
@@ -10,19 +10,13 @@ This repository includes small examples that demonstrate:
 
 - calling external AI APIs from Python
 - configuring credentials through environment variables
-- sending prompt-based requests to different providers
-- testing API responses with shell scripts and curl
+- sending prompt-based requests to Gemini
+- composing prompts and models with LangChain's runnable pipeline
 - keeping configuration separate from application logic
 
 ## Stack used
 
-- Python 3.14
-- OpenAI API
-- Google Gemini API
-- python-dotenv
-- pip and dependency management
-
-check requirements.txt for aditional info.
+TBD
 
 ## Repository structure
 
@@ -30,26 +24,31 @@ check requirements.txt for aditional info.
 .
 ├── .env_example
 ├── requirements.txt
-├── llms/
+├── langchain-lab/
 │   ├── chatGPT/
-│   │   ├── first_api_call.py
-│   │   ├── first_api_call_curl.sh
+│   │   ├── main.py
 │   │   └── response.txt
 │   └── gemini/
-│       ├── first_api_call.py
-│       ├── first_api_call_curl.sh
-│       └── response.txt
+│   │   ├── main.py
+│   │   └── response.txt
+├── llms-lab/
+│   ├── chatGPT/
+│   │   ├── main.py
+│   │   ├── main.sh
+│   │   └── response.txt
+│   └── gemini/
+│   │   ├── main.py
+│   │   ├── main.sh
+│   │   └── response.txt
+├── docs/
 ├── README.md
+├── LICENSE
+└── requirements.txt
 ```
 
 ## Dependencies
 
-The project dependencies are listed in `requirements.txt`:
-
-- `openai` — Python client for OpenAI APIs
-- `google-genai` — Python client for Google Gemini APIs
-- `python-dotenv` — loads environment variables from a `.env` file
-- `ipython` — interactive Python environment
+The project dependencies are listed in `requirements.txt`-
 
 Install dependencies with:
 
@@ -59,46 +58,45 @@ pip install -r requirements.txt
 
 ## Environment configuration
 
-API keys should never be stored directly in source code. The project uses `python-dotenv` to load credentials from a local `.env` file and keep them out of version control.
-
-### Example `.env`
-
-```env
-OPENAI_API_KEY=your_openai_api_key_here
-AISTUDIO_APIKEY=your_gemini_api_key_here
-```
+API keys should never be stored directly in source code. The project uses `python-dotenv` to load credentials from a local `.env` file and keep them out of version control. There is an .env_example on project root.
 
 ### Security practices
 
-- keep `.env` files local and never commit them to GitHub
-- add `.env` to `.gitignore`
-- use separate credentials for local development and production
-- rotate keys periodically
-- avoid logging sensitive values or printing tokens in terminal output
+- Keep `.env` files local and never commit them to GitHub
+- Never remove `.env` from `.gitignore`
+- Use separate credentials for local development and production
+- Rotate keys periodically
+- Avoid logging sensitive values or printing tokens in terminal output
 
-Example `.gitignore`:
-
-```gitignore
-.env
-__pycache__/
-*.pyc
-```
-or check project gitignore.
+There is a .gitignore included on project root.
 
 ## Usage
 
-Run the Python example:
+Activate the virtual environment and install the dependencies from the project root:
 
 ```bash
-python llms/chatGPT/first_api_call.py > llm/chatGPT/response.txt
-python llms/gemini/first_api_call.py > llm/gemini/response.txt
+source venv/bin/activate
+pip install -r requirements.txt
 ```
 
-Run the curl example:
+### LLM
 
 ```bash
-bash llms/chatGPT/first_api_call_curl.sh
-bash llms/gemini/first_api_call_curl.sh
+python llms-lab/chatGPT/main.py > llm/chatGPT/response.txt
+python llms-lab/gemini/main.py > llm/gemini/response.txt
+```
+
+Added aux curl calls:
+```bash
+bash llms-lab/chatGPT/main.sh
+bash llms-lab/gemini/main.sh
+```
+
+### Langchain
+
+```bash
+python langchain-lab/chatGPT/main.py > llm/chatGPT/response.txt
+python langchain-lab/gemini/main.py > llm/gemini/response.txt
 ```
 
 ## Why this project is relevant
@@ -113,16 +111,7 @@ It is a useful project for showing foundational knowledge in:
 - configuration management
 - secure development practices
 
-## Future improvements
 
-This project can be extended with:
-
-- a small web interface using Flask or FastAPI
-- conversation flows with memory
-- a multi-provider abstraction layer
-- prompt templates and structured responses
-- error handling and retries
-- deployment-ready configuration patterns
 
 ## Author
 
