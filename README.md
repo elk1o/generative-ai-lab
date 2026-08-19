@@ -30,6 +30,7 @@ TBD
 │   │   └── response.txt
 │   └── gemini/
 │   │   ├── main.py
+│   │   ├── ai_api_basketball_stats.py
 │   │   └── response.txt
 ├── llms-lab/
 │   ├── chatGPT/
@@ -95,8 +96,9 @@ bash llms-lab/gemini/main.sh
 ### Langchain
 
 ```bash
-python langchain-lab/chatGPT/main.py > llm/chatGPT/response.txt
-python langchain-lab/gemini/main.py > llm/gemini/response.txt
+python langchain-lab/chatGPT/main.py > langchain-lab/chatGPT/response.txt
+python langchain-lab/gemini/main.py > langchain-lab/gemini/response.txt
+python langchain-lab/gemini/ai_api_basketball_stats.py > langchain-lab/gemini/stats.txt
 ```
 
 ## Why this project is relevant
