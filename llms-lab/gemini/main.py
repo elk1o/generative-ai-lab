@@ -1,6 +1,6 @@
-from google import genai
 from dotenv import load_dotenv
 import os
+from langchain_google_genai import ChatGoogleGenerativeAI
 
 load_dotenv()
 AISTUDIO_APIKEY = os.getenv('AISTUDIO_APIKEY')
@@ -10,18 +10,18 @@ print("*************************")
 print("Starting firt Gemini api call script")
 print(f"Question: {PROMPT}")
 
-client = genai.Client(api_key=AISTUDIO_APIKEY)
-
 try:
-    interaction = client.interactions.create(
-        model="gemini-3.7-flash",
-        input=PROMPT
+    llm = ChatGoogleGenerativeAI(
+        model="gemini-3.6-flash",
+        temperature=0,
+        google_api_key=AISTUDIO_APIKEY
     )
-    print(f"Answer: {interaction.output_text}");
+
+    response = llm.invoke(PROMPT)
+    print(f"Answer: {response.content}")
 
 except Exception as e:
     print(f"\n Error detectado: \n {e}")
-
 
 print("")
 print("Ending first api call script")
