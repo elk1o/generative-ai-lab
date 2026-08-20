@@ -12,7 +12,18 @@ El proyecto sigue una versión educativa de [Semantic Versioning](https://semver
 
 ### Planned
 
-- Continuar el recorrido por output parsers, memory, RAG y agentes según el roadmap.
+- Continuar el recorrido por memory, RAG y agentes según el roadmap.
+
+## [0.6.0] - Structured LangChain output
+
+### Added
+
+- Ejemplo de salida estructurada en `langchain-lab/gemini/structured_output.py`.
+- Definición del modelo Pydantic `Player` para describir los datos esperados.
+- Uso de `ChatPromptTemplate.from_template` para crear el prompt.
+- Uso de `with_structured_output(Player)` para recibir un objeto Python validado en lugar de texto libre.
+- Comprobación del tipo de resultado devuelto por la cadena.
+- Guardado de la salida del ejemplo en `langchain-lab/gemini/structured_output.txt`.
 
 ## [0.5.0] - Sequential LangChain chains
 
