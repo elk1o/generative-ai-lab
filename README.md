@@ -121,17 +121,34 @@ python langchain-lab/gemini/memory.py > langchain-lab/gemini/memory.txt
 
 ## Why this project is relevant
 
-This repository reflects a practical, hands-on approach to AI integration. It demonstrates the type of work often required when building AI-powered tools and services, including secure configuration, API consumption, and experimentation with prompt-driven workflows.
+This repository documents a practical progression from direct LLM API calls to reusable LangChain workflows. It records how providers are configured, how models are called from Python, and how increasingly complex AI features are composed step by step while keeping credentials outside the source code.
 
-It is a useful project for showing foundational knowledge in:
+The project demonstrates:
 
-- LLM integration
-- Python automation
-- external API usage
-- configuration management
-- secure development practices
+- Direct integration with OpenAI and Google Gemini APIs.
+- Python and shell-based API usage, including `curl` examples.
+- Environment-based configuration with `python-dotenv`.
+- Secure API-key management through `.env` and `.gitignore`.
+- LangChain model wrappers for working with Gemini and OpenAI.
+- Reusable prompt templates with single and multiple variables.
+- Basic LCEL chains that compose prompts and models with the `|` operator.
+- API-enriched chains that add external data to an LLM prompt.
+- Sequential chains that pass the output of one model call into another.
+- Structured output validated with Pydantic models.
+- Conversation memory using message histories and contextual follow-up questions.
 
+Together, these examples establish the fundamentals needed to evolve towards more advanced workflows such as RAG, tool-using agents, and AI-powered backend services.
 
+## Future improvements
+
+The next stage of the roadmap is to apply the LangChain foundations to more advanced AI workflows:
+
+- RAG (Retrieval-Augmented Generation): load documents, split text into chunks, generate embeddings, and store them in a vector database such as ChromaDB.
+- Build a complete RAG workflow that answers questions using project-specific documents.
+- Experiment with chunking and retrieval strategies to improve response accuracy.
+- Build agents with tools and function calling, including workflows that combine multiple tools.
+- Expose an AI workflow through a small backend or REST API using FastAPI.
+- Add error handling, retries, testing, and deployment-ready configuration patterns.
 
 ## Author
 
