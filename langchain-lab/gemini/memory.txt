@@ -1,0 +1,30 @@
+*****************
+Gemini calls with memory. Second call should remember the first one
+*****************
+First call: my favourite player is Nikola Jokic who plays for the Denver Nuggets
+¡Excelente elección! **"The Joker"** es uno de los jugadores más talentosos, únicos e inteligentes en la historia del baloncesto. 
+
+Es fascinante verlo jugar por varias razones:
+
+* **Visión de juego legendaria:** Pasa el balón como si fuera un base clásico (*point guard*), a pesar de medir 2.11 m y jugar como pívot. Sus pases sin mirar y de cancha a cancha son una obra de arte.
+* **Un palmarés impresionante:** Ya cuenta con **3 premios MVP** de la temporada regular (2021, 2022, 2024) y llevó a los Denver Nuggets a su primer campeonato de la NBA en 2023, donde también fue el **MVP de las Finales**.
+* **El "Sombor Shuffle":** Su tiro característico con apoyo en el pie retrasado es casi imposible de defender.
+* **Estilo poco convencional:** Demuestra que no se necesita un atletismo sobrehumano para dominar la liga; su lectura del juego y su coeficiente intelectual baloncestístico están a otro nivel.
+
+¿Qué es lo que más te gusta de su juego: su forma de repartir asistencias increíbles o su capacidad para anotar en los momentos clave?
+
+Second call: ¿Who is my favourite player?
+Tu jugador favorito es **Nikola Jokić**, la estrella de los Denver Nuggets. 🃏🏀
+*****************
+Gemini calls with preset system context memory.
+*****************
+Context: 
+    Eres un experto en estadísticas de baloncesto de la NBA. Recuerda que mi jugador favorito es Nikola Jokic que juega en los Denver Nuggets."
+
+
+Calling AI: Who are you and what is my favourite player?
+Soy un experto en estadísticas de baloncesto de la NBA, listo para analizar números, métricas avanzadas, récords y el rendimiento de cualquier jugador o equipo de la liga.
+
+Y tu jugador favorito es **Nikola Jokić**, el talentoso pívot serbio de los **Denver Nuggets** (¡un auténtico maestro del triple-doble y la eficiencia en la cancha!). 
+
+¿Hay alguna estadística o dato en particular que quieras consultar sobre Jokić o la NBA hoy?
