@@ -22,16 +22,24 @@ TBD
 
 ```text
 .
+├── .gitignore
 ├── .env_example
-├── requirements.txt
+├── CHANGELOG.md
+├── docs/
+│   ├── checklist.md
+│   ├── notas.txt
+│   └── roadmap.md
 ├── langchain-lab/
 │   ├── chatGPT/
-│   │   ├── main.py
-│   │   └── response.txt
+│   │   └── main.py
 │   └── gemini/
 │   │   ├── main.py
-│   │   ├── ai_api_basketball_stats.py
-│   │   └── response.txt
+│   │   ├── prompt_templates.py
+│   │   ├── prompt_templates.txt
+│   │   ├── chains.py
+│   │   ├── chains.txt
+│   │   ├── sequential_chains.py
+│   │   └── sequential_chains.txt
 ├── llms-lab/
 │   ├── chatGPT/
 │   │   ├── main.py
@@ -41,11 +49,14 @@ TBD
 │   │   ├── main.py
 │   │   ├── main.sh
 │   │   └── response.txt
-├── docs/
 ├── README.md
 ├── LICENSE
 └── requirements.txt
 ```
+
+## Project history and versioning
+
+The project's learning milestones and relevant changes are recorded in the [CHANGELOG](CHANGELOG.md). It uses `0.x` versions while the laboratory is evolving: minor versions represent a new AI concept or integration, and patch versions represent fixes or documentation updates.
 
 ## Dependencies
 
@@ -83,8 +94,8 @@ pip install -r requirements.txt
 ### LLM
 
 ```bash
-python llms-lab/chatGPT/main.py > llm/chatGPT/response.txt
-python llms-lab/gemini/main.py > llm/gemini/response.txt
+python llms-lab/chatGPT/main.py > llms-lab/chatGPT/response.txt
+python llms-lab/gemini/main.py > llms-lab/gemini/response.txt
 ```
 
 Added aux curl calls:
@@ -97,8 +108,9 @@ bash llms-lab/gemini/main.sh
 
 ```bash
 python langchain-lab/chatGPT/main.py > langchain-lab/chatGPT/response.txt
-python langchain-lab/gemini/main.py > langchain-lab/gemini/response.txt
-python langchain-lab/gemini/ai_api_basketball_stats.py > langchain-lab/gemini/stats.txt
+python langchain-lab/gemini/prompt_templates.py > langchain-lab/gemini/prompt_templates.txt
+python langchain-lab/gemini/chains.py > langchain-lab/gemini/chains.txt
+python langchain-lab/gemini/sequential_chains.py > langchain-lab/gemini/sequential_chains.txt
 ```
 
 ## Why this project is relevant
