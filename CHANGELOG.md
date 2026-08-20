@@ -12,7 +12,17 @@ El proyecto sigue una versión educativa de [Semantic Versioning](https://semver
 
 ### Planned
 
-- Continuar el recorrido por memory, RAG y agentes según el roadmap.
+- Continuar el recorrido por RAG y agentes según el roadmap.
+
+## [0.7.0] - Conversation memory
+
+### Added
+
+- Ejemplo de memoria conversacional en `langchain-lab/gemini/memory.py`.
+- Historial compartido de mensajes mediante una lista de `HumanMessage` y `AIMessage`.
+- Función `call_AI_with_history` que conserva el contexto y lo envía al modelo en cada interacción.
+- Demostración de recuperación de información proporcionada en un mensaje anterior.
+- Guardado de la salida del ejemplo en `langchain-lab/gemini/memory.txt`.
 
 ## [0.6.0] - Structured LangChain output
 

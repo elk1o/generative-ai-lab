@@ -41,7 +41,9 @@ TBD
 │   │   ├── sequential_chains.py
 │   │   ├── sequential_chains.txt
 │   │   ├── structured_output.py
-│   │   └── structured_output.txt
+│   │   ├── structured_output.txt
+│   │   ├── memory.py
+│   │   └── memory.txt
 ├── llms-lab/
 │   ├── chatGPT/
 │   │   ├── main.py
@@ -114,6 +116,7 @@ python langchain-lab/gemini/prompt_templates.py > langchain-lab/gemini/prompt_te
 python langchain-lab/gemini/chains.py > langchain-lab/gemini/chains.txt
 python langchain-lab/gemini/sequential_chains.py > langchain-lab/gemini/sequential_chains.txt
 python langchain-lab/gemini/structured_output.py > langchain-lab/gemini/structured_output.txt
+python langchain-lab/gemini/memory.py > langchain-lab/gemini/memory.txt
 ```
 
 ## Why this project is relevant
