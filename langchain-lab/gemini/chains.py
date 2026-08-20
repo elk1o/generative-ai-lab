@@ -13,23 +13,17 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 
 BASE_URL = "https://api.balldontlie.io"
 
-# Set up headers with authentication
 headers = {"Authorization": BDL_APIKEY}
 
-today = "2026-08-16"
-
-# Fetch today's NBA games
 response = requests.get(
     f"{BASE_URL}/v1/players",
     headers=headers,
     params={"search": PLAYER}
 )
 
-# Print the results
 bdl_player_raw_data = response.json()
 
 if bdl_player_raw_data['data']:
-    #print(f"Found player {PLAYER}: {bdl_player_raw_data['data'][0]}")
     player_data = bdl_player_raw_data['data'][0]
 
     # Call the Google Generative AI model with prompttemplate with enriched API data
