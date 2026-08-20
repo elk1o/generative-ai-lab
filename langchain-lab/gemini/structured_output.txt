@@ -1,0 +1,9 @@
+*****************
+Consulting specific data player Nikola Jokic with specific and structured output
+*****************
+name='Nikola Jokić' position='Pívot' height='2.11 m' weight='129 kg' jersey_number=15 team='Denver Nuggets'
+
+*****************
+Type of data returned by the structured output chain
+*****************
+<class '__main__.Player'>

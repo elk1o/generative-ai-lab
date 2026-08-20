@@ -39,7 +39,9 @@ TBD
 │   │   ├── chains.py
 │   │   ├── chains.txt
 │   │   ├── sequential_chains.py
-│   │   └── sequential_chains.txt
+│   │   ├── sequential_chains.txt
+│   │   ├── structured_output.py
+│   │   └── structured_output.txt
 ├── llms-lab/
 │   ├── chatGPT/
 │   │   ├── main.py
@@ -111,6 +113,7 @@ python langchain-lab/chatGPT/main.py > langchain-lab/chatGPT/response.txt
 python langchain-lab/gemini/prompt_templates.py > langchain-lab/gemini/prompt_templates.txt
 python langchain-lab/gemini/chains.py > langchain-lab/gemini/chains.txt
 python langchain-lab/gemini/sequential_chains.py > langchain-lab/gemini/sequential_chains.txt
+python langchain-lab/gemini/structured_output.py > langchain-lab/gemini/structured_output.txt
 ```
 
 ## Why this project is relevant
