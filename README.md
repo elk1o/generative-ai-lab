@@ -49,7 +49,8 @@ TBD
 │   │   └── season_review_25-26.pdf
 │   └── gemini/
 │       ├── loaders.py
-│       └── embeddings.py
+│       ├── embeddings.py
+│       └── embeddings.txt
 ├── llms-lab/
 │   ├── chatGPT/
 │   │   ├── main.py
@@ -126,6 +127,12 @@ python langchain-lab/gemini/chains.py > langchain-lab/gemini/chains.txt
 python langchain-lab/gemini/sequential_chains.py > langchain-lab/gemini/sequential_chains.txt
 python langchain-lab/gemini/structured_output.py > langchain-lab/gemini/structured_output.txt
 python langchain-lab/gemini/memory.py > langchain-lab/gemini/memory.txt
+```
+
+### RAG
+
+```bash
+python rag-lab/gemini/embeddings.py > rag-lab/gemini/embeddings.txt
 ```
 
 ## Why this project is relevant
