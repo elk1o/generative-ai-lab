@@ -1,11 +1,19 @@
 python-dotenv>=1.0.0
 ipython>=8.0.0
 pydantic>=2.0.0,<3.0.0
+pypdf>=5.0.0
 
-# Core de LangChain
+# Lanchain core
 langchain>=0.3.0,<1.0.0
 langchain-core>=0.3.0,<1.0.0
+langchain-community>=0.3.0,<1.0.0
 
-# Integraciones de modelos (El "pegamento")
+# Langchain LLM support
 langchain-openai>=0.3.0,<1.0.0
 langchain-google-genai>=2.0.0
+
+# Langchain Vectorial DB support
+langchain-chroma>=0.2.0
+
+# Vectorial DB
+chromadb>=0.5.0
