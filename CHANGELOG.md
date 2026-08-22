@@ -12,7 +12,19 @@ El proyecto sigue una versión educativa de [Semantic Versioning](https://semver
 
 ### Planned
 
-- Continuar el recorrido por RAG y agentes según el roadmap.
+- Completar el recorrido de RAG y continuar con agentes según el roadmap.
+
+## [0.8.0] - RAG loaders and embeddings
+
+### Added
+
+- Primeros componentes del flujo RAG en `rag-lab/gemini/`.
+- `loaders.py` para cargar documentos PDF con `PyPDFLoader`.
+- División de documentos en fragmentos mediante `RecursiveCharacterTextSplitter`.
+- `embeddings.py` para convertir los fragmentos en vectores con `GoogleGenerativeAIEmbeddings`.
+- Persistencia de los embeddings y documentos en ChromaDB.
+- Comprobación básica de la colección y de los fragmentos indexados.
+- Directorio `chroma_db/` para almacenar la base de datos vectorial local.
 
 ## [0.7.0] - Conversation memory
 

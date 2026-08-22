@@ -22,9 +22,7 @@ TBD
 
 ```text
 .
-├── .gitignore
-├── .env_example
-├── CHANGELOG.md
+├── chroma_db/
 ├── docs/
 │   ├── checklist.md
 │   ├── notas.txt
@@ -44,6 +42,14 @@ TBD
 │   │   ├── structured_output.txt
 │   │   ├── memory.py
 │   │   └── memory.txt
+├── rag-lab/
+│   ├── data/
+│   │   ├── jokic_wikipedia.pdf
+│   │   ├── lideres_nba_25-26.pdf
+│   │   └── season_review_25-26.pdf
+│   └── gemini/
+│       ├── loaders.py
+│       └── embeddings.py
 ├── llms-lab/
 │   ├── chatGPT/
 │   │   ├── main.py
@@ -54,6 +60,9 @@ TBD
 │   │   ├── main.sh
 │   │   └── response.txt
 ├── README.md
+├── .gitignore
+├── .env_example
+├── CHANGELOG.md
 ├── LICENSE
 └── requirements.txt
 ```
