@@ -22,9 +22,7 @@ TBD
 
 ```text
 .
-├── .gitignore
-├── .env_example
-├── CHANGELOG.md
+├── chroma_db/
 ├── docs/
 │   ├── checklist.md
 │   ├── notas.txt
@@ -44,6 +42,17 @@ TBD
 │   │   ├── structured_output.txt
 │   │   ├── memory.py
 │   │   └── memory.txt
+├── rag-lab/
+│   ├── data/
+│   │   ├── jokic_wikipedia.pdf
+│   │   ├── lideres_nba_25-26.pdf
+│   │   └── season_review_25-26.pdf
+│   └── gemini/
+│       ├── loaders.py
+│       ├── embeddings.py
+│       ├── embeddings.txt
+│       ├── final_rag.py
+│       └── final_rag.txt
 ├── llms-lab/
 │   ├── chatGPT/
 │   │   ├── main.py
@@ -54,6 +63,9 @@ TBD
 │   │   ├── main.sh
 │   │   └── response.txt
 ├── README.md
+├── .gitignore
+├── .env_example
+├── CHANGELOG.md
 ├── LICENSE
 └── requirements.txt
 ```
@@ -99,12 +111,8 @@ pip install -r requirements.txt
 
 ```bash
 python llms-lab/chatGPT/main.py > llms-lab/chatGPT/response.txt
-python llms-lab/gemini/main.py > llms-lab/gemini/response.txt
-```
-
-Added aux curl calls:
-```bash
 bash llms-lab/chatGPT/main.sh
+python llms-lab/gemini/main.py > llms-lab/gemini/response.txt
 bash llms-lab/gemini/main.sh
 ```
 
@@ -117,6 +125,13 @@ python langchain-lab/gemini/chains.py > langchain-lab/gemini/chains.txt
 python langchain-lab/gemini/sequential_chains.py > langchain-lab/gemini/sequential_chains.txt
 python langchain-lab/gemini/structured_output.py > langchain-lab/gemini/structured_output.txt
 python langchain-lab/gemini/memory.py > langchain-lab/gemini/memory.txt
+```
+
+### RAG
+
+```bash
+python rag-lab/gemini/embeddings.py > rag-lab/gemini/embeddings.txt
+python rag-lab/gemini/final_rag.py > rag-lab/gemini/final_rag.txt
 ```
 
 ## Why this project is relevant

@@ -12,7 +12,31 @@ El proyecto sigue una versión educativa de [Semantic Versioning](https://semver
 
 ### Planned
 
-- Continuar el recorrido por RAG y agentes según el roadmap.
+- Continuar con agentes según el roadmap.
+
+## [0.9.0] - Complete RAG workflow
+
+### Added
+
+- Ejemplo completo de RAG en `rag-lab/gemini/final_rag.py`.
+- Carga de la base vectorial existente en ChromaDB sin volver a indexar los documentos.
+- Búsqueda por similitud para recuperar los fragmentos más relevantes.
+- Uso de un retriever para proporcionar contexto documental al modelo.
+- Cadena RAG completa con `ChatPromptTemplate`, `RunnablePassthrough` y `StrOutputParser`.
+- Prompt que obliga al modelo a responder únicamente con la información del contexto recuperado.
+- Guardado de la salida del ejemplo en `rag-lab/gemini/final_rag.txt`.
+
+## [0.8.0] - RAG loaders and embeddings
+
+### Added
+
+- Primeros componentes del flujo RAG en `rag-lab/gemini/`.
+- `loaders.py` para cargar documentos PDF con `PyPDFLoader`.
+- División de documentos en fragmentos mediante `RecursiveCharacterTextSplitter`.
+- `embeddings.py` para convertir los fragmentos en vectores con `GoogleGenerativeAIEmbeddings`.
+- Persistencia de los embeddings y documentos en ChromaDB.
+- Comprobación básica de la colección y de los fragmentos indexados.
+- Directorio `chroma_db/` para almacenar la base de datos vectorial local.
 
 ## [0.7.0] - Conversation memory
 
