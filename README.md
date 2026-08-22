@@ -109,12 +109,8 @@ pip install -r requirements.txt
 
 ```bash
 python llms-lab/chatGPT/main.py > llms-lab/chatGPT/response.txt
-python llms-lab/gemini/main.py > llms-lab/gemini/response.txt
-```
-
-Added aux curl calls:
-```bash
 bash llms-lab/chatGPT/main.sh
+python llms-lab/gemini/main.py > llms-lab/gemini/response.txt
 bash llms-lab/gemini/main.sh
 ```
 
