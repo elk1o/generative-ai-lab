@@ -1,0 +1,58 @@
+*****************
+Consulting collection player_stats
+*****************
+Result:
+
+Fragmentos más relevantes para: '¿De qué habla el documento sobre Nikola Jokic?'
+
+--- Fragmento 1 ---
+puntos por partido!
+Jokic hace historia, los franceses brillan en la pintura
+Nikola Jokic se ha convertido en el primer jugador en liderar simultáneamente en rebotes (12,9) y
+asistencias (10,7) en una misma temporada NBA. Wilt Chamberlain estuvo cerca de lograrlo en 1967-68:
+
+--- Fragmento 2 ---
+aunque no será elegible para los trofeos individuales de fin de temporada (salvo que obtenga una
+dispensa excepcional), es Luka Doncic quien termina como máximo anotador de la campaña, ¡con 33,5
+puntos por partido!
+Jokic hace historia, los franceses brillan en la pintura
+
+--- Fragmento 3 ---
+Donovan Clingan (Portland): 892
+Karl-Anthony Towns (New York): 889
+Rudy Gobert (Minnesota): 872
+Nikola Jokic (Denver): 836
+Jalen Johnson (Atlanta): 740
+Asistencias
+Promedio
+Nikola Jokic (Denver): 10,7
+Cade Cunningham (Detroit): 9,9
+Luka Doncic (Los Angeles Lakers): 8,3
+
+--- Fragmento 4 ---
+Jalen Johnson (Atlanta): 639
+Victor Wembanyama (San Antonio): 606
+Bam Adebayo (Miami): 583
+Pérdidas de balón
+Promedio
+Luka Doncic (Los Angeles Lakers): 4,0
+Deni Avdija (Portland): 3,8
+Nikola Jokic (Denver): 3,7
+Cade Cunningham (Detroit): 3,7
+Jaylen Brown (Boston): 3,7
+Total
+
+--- Fragmento 5 ---
+Últimas Noticias de baloncesto | Solobasket NBA ¿Quiénes son los líderes estadísticos de la temporada regular 2025-26 de la NBA?
+¿Quiénes son los líderes estadísticos de la temporada regular 2025-26 dela NBA?
+POR AXEL CLODYActualizado: 14 abril 2026 COMPARTIR:
+ICONSPORT y IMAGO / ZUMA Press Wire
+
+*****************
+Consulting Gemini with RAG data stored in player_stats
+*****************
+Question: ¿En qué estadística lideró Nikola Jokic la temporada 2025-26 y qué logro histórico ha conseguido?
+Answer: Basándote en el contexto proporcionado:
+
+* **Estadísticas en las que lideró:** Lideró en **rebotes** (con un promedio de 12,9 por partido) y en **asistencias** (con un promedio de 10,7 por partido), además de liderar en **rebotes defensivos** (con 836).
+* **Logro histórico:** Se ha convertido en el **primer jugador en liderar simultáneamente en rebotes y asistencias en una misma temporada de la NBA**.

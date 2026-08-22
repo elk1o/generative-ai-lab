@@ -1,0 +1,14 @@
+*****************
+Ingesting document 'lideres_nba_25-26.pdf' to enrich AI prompts (RAG architecture)
+*****************
+Uploaded document with 6 pages
+Document split in 43 parts
+
+*****************
+Ingesting PDF data on ChromaDB on collection nikola_jokic_stats
+*****************
+Info indexed on ChromaDB succesfully
+Checking collection...
+Number of splits on collection: 43
+Last 3 split IDs: ['66889b2f-beaa-4b6f-bb87-8b334ed13ed7', '9617754d-e270-420f-a7e6-a10a19da4f81', 'f57bf1c2-81a1-4320-99f4-486540ec3a3c']
+
