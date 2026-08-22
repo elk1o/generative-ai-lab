@@ -50,7 +50,9 @@ TBD
 │   └── gemini/
 │       ├── loaders.py
 │       ├── embeddings.py
-│       └── embeddings.txt
+│       ├── embeddings.txt
+│       ├── final_rag.py
+│       └── final_rag.txt
 ├── llms-lab/
 │   ├── chatGPT/
 │   │   ├── main.py
@@ -129,6 +131,7 @@ python langchain-lab/gemini/memory.py > langchain-lab/gemini/memory.txt
 
 ```bash
 python rag-lab/gemini/embeddings.py > rag-lab/gemini/embeddings.txt
+python rag-lab/gemini/final_rag.py > rag-lab/gemini/final_rag.txt
 ```
 
 ## Why this project is relevant
