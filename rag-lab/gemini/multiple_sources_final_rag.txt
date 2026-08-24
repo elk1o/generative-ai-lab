@@ -1,0 +1,31 @@
+--- Chunk 1 — Source: rag-lab/data/triples_dobles_sports_illustrated.pdf ---
+¿Cuáles son los números y premios de Nikola Jokic en la
+NBA?
+Nikola Jokic es uno de los mejores jugadores, si no el mejor, de la NBA en la actualidad.
+
+--- Chunk 2 — Source: rag-lab/data/triples_dobles_sports_illustrated.pdf ---
+serbio convertirse en el jugador de la NBA con más triples-dobles en la historia de la liga.
+"Es un jugador legendario", dijo Jokic a la prensa sobre 
+
+--- Chunk 3 — Source: rag-lab/data/lideres_nba_25-26.pdf ---
+puntos por partido!
+Jokic hace historia, los franceses brillan en la pintura
+Nikola Jokic se ha convertido en el primer jugador en liderar simultáneam
+
+--- Chunk 4 — Source: rag-lab/data/triples_dobles_sports_illustrated.pdf ---
+Nikola Jokic seguramente será considerado en algunos años uno de los mejores jugadores en la historia
+de la NBA. Sus tres premios MVP e innumerables l
+
+--- Chunk 5 — Source: rag-lab/data/triples_dobles_sports_illustrated.pdf ---
+Jokic, quien anotó 22 puntos, repartió 17 asistencias y capturó 14 rebotes ante los Bulls, está ahora a sólo
+25 triples-dobles de igualar a Westbrook 
+
+*****************
+Consulting Gemini with RAG data stored in player_stats_multiple_sources
+*****************
+Question: Haz un resumen de los logros históricos de Nikola Jokic esta temporada, incluyendo tanto sus liderazgos estadísticos como sus triples-dobles en carrera.
+Answer: Basándome únicamente en el contexto proporcionado, los logros históricos de Nikola Jokic son los siguientes:
+
+* **Liderazgos estadísticos esta temporada:** Se ha convertido en el primer jugador en la historia de la NBA en liderar simultáneamente las categorías de rebotes (12,9) y asistencias (10,7) en una misma temporada.
+* **Triples-dobles y posición histórica:** Se encuentra a tan solo 25 triples-dobles de igualar a Russell Westbrook para convertirse en el jugador con más triples-dobles en la historia de la NBA (tras registrar un triple-doble de 22 puntos, 17 asistencias y 14 rebotes ante los Bulls).
+* **Otros logros y promedios en su carrera:** Cuenta con tres premios MVP e innumerables logros con los Denver Nuggets, registrando promedios en su carrera (hasta el 8 de febrero de 2026) de 22.1 puntos por partido.

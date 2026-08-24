@@ -1,108 +1,121 @@
 # Changelog
 
-Todos los cambios relevantes de este proyecto se documentan en este archivo.
+All relevant changes to this project are documented in this file.
 
-El proyecto sigue una versión educativa de [Semantic Versioning](https://semver.org/):
+The project follows an educational version of [Semantic Versioning](https://semver.org/):
 
-- `MAJOR`: cambio de enfoque o reorganización incompatible del laboratorio.
-- `MINOR`: nuevo concepto, integración o ejemplo funcional.
-- `PATCH`: corrección, ajuste de configuración o mejora documental.
+- `MAJOR`: a change in direction or an incompatible reorganization of the lab.
+- `MINOR`: a new concept, integration, or functional example.
+- `PATCH`: a bug fix, configuration adjustment, or documentation improvement.
 
 ## [Unreleased]
 
 ### Planned
 
-- Continuar con agentes según el roadmap.
+- Continue with agents according to the roadmap.
+
+## [0.10.0] - Multi-source RAG
+
+### Added
+
+- A RAG workflow capable of working with information from multiple PDF documents.
+- `multiple_sources_loaders.py` to load and prepare multiple document sources.
+- `multiple_sources_embeddings.py` to generate embeddings and persist them in a dedicated ChromaDB collection.
+- `multiple_sources_final_rag.py` to retrieve combined context from multiple sources and generate a response with Gemini.
+- Use of `source` metadata to identify the original document for each retrieved chunk.
+- Multi-source similarity search and display of the retrieved chunks before running the RAG chain.
+- Questions that combine information from different documents into a single answer.
+- Output files `multiple_sources_embeddings.txt` and `multiple_sources_final_rag.txt`.
 
 ## [0.9.0] - Complete RAG workflow
 
 ### Added
 
-- Ejemplo completo de RAG en `rag-lab/gemini/final_rag.py`.
-- Carga de la base vectorial existente en ChromaDB sin volver a indexar los documentos.
-- Búsqueda por similitud para recuperar los fragmentos más relevantes.
-- Uso de un retriever para proporcionar contexto documental al modelo.
-- Cadena RAG completa con `ChatPromptTemplate`, `RunnablePassthrough` y `StrOutputParser`.
-- Prompt que obliga al modelo a responder únicamente con la información del contexto recuperado.
-- Guardado de la salida del ejemplo en `rag-lab/gemini/final_rag.txt`.
+- Complete RAG example in `rag-lab/gemini/final_rag.py`.
+- Loading of the existing ChromaDB vector database without re-indexing the documents.
+- Similarity search to retrieve the most relevant chunks.
+- Use of a retriever to provide document context to the model.
+- Complete RAG chain with `ChatPromptTemplate`, `RunnablePassthrough`, and `StrOutputParser`.
+- A prompt that requires the model to answer only with information from the retrieved context.
+- Output saved to `rag-lab/gemini/final_rag.txt`.
 
 ## [0.8.0] - RAG loaders and embeddings
 
 ### Added
 
-- Primeros componentes del flujo RAG en `rag-lab/gemini/`.
-- `loaders.py` para cargar documentos PDF con `PyPDFLoader`.
-- División de documentos en fragmentos mediante `RecursiveCharacterTextSplitter`.
-- `embeddings.py` para convertir los fragmentos en vectores con `GoogleGenerativeAIEmbeddings`.
-- Persistencia de los embeddings y documentos en ChromaDB.
-- Comprobación básica de la colección y de los fragmentos indexados.
-- Directorio `chroma_db/` para almacenar la base de datos vectorial local.
+- Initial RAG components in `rag-lab/gemini/`.
+- `loaders.py` to load PDF documents with `PyPDFLoader`.
+- Document splitting into chunks using `RecursiveCharacterTextSplitter`.
+- `embeddings.py` to convert chunks into vectors with `GoogleGenerativeAIEmbeddings`.
+- Persistence of embeddings and documents in ChromaDB.
+- Basic validation of the collection and indexed chunks.
+- `chroma_db/` directory to store the local vector database.
 
 ## [0.7.0] - Conversation memory
 
 ### Added
 
-- Ejemplo de memoria conversacional en `langchain-lab/gemini/memory.py`.
-- Historial compartido de mensajes mediante una lista de `HumanMessage` y `AIMessage`.
-- Función `call_AI_with_history` que conserva el contexto y lo envía al modelo en cada interacción.
-- Demostración de recuperación de información proporcionada en un mensaje anterior.
-- Guardado de la salida del ejemplo en `langchain-lab/gemini/memory.txt`.
+- Conversation memory example in `langchain-lab/gemini/memory.py`.
+- Shared message history using a list of `HumanMessage` and `AIMessage` objects.
+- `call_AI_with_history` function that preserves the context and sends it to the model on each interaction.
+- Demonstration of retrieving information provided in a previous message.
+- Output saved to `langchain-lab/gemini/memory.txt`.
 
 ## [0.6.0] - Structured LangChain output
 
 ### Added
 
-- Ejemplo de salida estructurada en `langchain-lab/gemini/structured_output.py`.
-- Definición del modelo Pydantic `Player` para describir los datos esperados.
-- Uso de `ChatPromptTemplate.from_template` para crear el prompt.
-- Uso de `with_structured_output(Player)` para recibir un objeto Python validado en lugar de texto libre.
-- Comprobación del tipo de resultado devuelto por la cadena.
-- Guardado de la salida del ejemplo en `langchain-lab/gemini/structured_output.txt`.
+- Structured output example in `langchain-lab/gemini/structured_output.py`.
+- Definition of the Pydantic `Player` model to describe the expected data.
+- Use of `ChatPromptTemplate.from_template` to create the prompt.
+- Use of `with_structured_output(Player)` to receive a validated Python object instead of free-form text.
+- Checking the type of result returned by the chain.
+- Output saved to `langchain-lab/gemini/structured_output.txt`.
 
 ## [0.5.0] - Sequential LangChain chains
 
 ### Added
 
-- Ejemplo de cadena secuencial en `langchain-lab/gemini/sequential_chains.py`.
-- Composición LCEL de una primera cadena de estadísticas y una segunda cadena de análisis.
-- Uso de `RunnablePassthrough.assign` para pasar automáticamente el resultado de la primera cadena a la segunda.
-- Uso de `StrOutputParser` para convertir las respuestas del modelo en texto antes de encadenarlas.
-- Guardado de la salida del ejemplo en `langchain-lab/gemini/sequential_chains.txt`.
+- Sequential chain example in `langchain-lab/gemini/sequential_chains.py`.
+- LCEL composition of a first statistics chain and a second analysis chain.
+- Use of `RunnablePassthrough.assign` to automatically pass the first chain's result to the second.
+- Use of `StrOutputParser` to convert model responses to text before chaining them.
+- Output saved to `langchain-lab/gemini/sequential_chains.txt`.
 
 ## [0.4.0] - API-enriched LangChain chain
 
 ### Added
 
 - `langchain-lab/gemini/chains.py`.
-- Consulta de jugadores en la API externa Ball Don't Lie.
-- Enriquecimiento de un prompt de Gemini con los datos devueltos por la API.
-- Composición de `PromptTemplate` y `ChatGoogleGenerativeAI` mediante LCEL (`prompt_template | llm`).
-- Ejecución de la cadena con `chain.invoke(...)` y presentación del análisis generado.
+- Player lookup through the external Ball Don't Lie API.
+- Enrichment of a Gemini prompt with the data returned by the API.
+- Composition of `PromptTemplate` and `ChatGoogleGenerativeAI` using LCEL (`prompt_template | llm`).
+- Execution of the chain with `chain.invoke(...)` and display of the generated analysis.
 
 ## [0.3.0] - Basic LangChain chains
 
 ### Added
 
-- Primeros ejemplos de LangChain con Gemini y OpenAI.
-- Uso de modelos mediante wrappers de LangChain.
-- Uso de `PromptTemplate` para separar la plantilla del prompt de la lógica de ejecución.
-- Cadenas básicas que conectan prompt y modelo mediante LCEL.
+- First LangChain examples with Gemini and OpenAI.
+- Use of models through LangChain wrappers.
+- Use of `PromptTemplate` to separate the prompt template from the execution logic.
+- Basic chains connecting prompts and models through LCEL.
 
 ## [0.2.0] - Direct LLM API calls
 
 ### Added
 
-- Primeras llamadas directas a las APIs de OpenAI y Gemini.
-- Ejemplos de ejecución desde Python en `llms-lab/`.
-- Scripts auxiliares de `curl` para probar las APIs desde shell.
-- Ficheros de respuesta para conservar ejemplos de salida.
+- First direct calls to the OpenAI and Gemini APIs.
+- Python execution examples in `llms-lab/`.
+- Auxiliary `curl` scripts for testing the APIs from the shell.
+- Response files to preserve example outputs.
 
 ## [0.1.0] - Project foundation
 
 ### Added
 
-- Estructura inicial del laboratorio de IA generativa.
-- Entorno virtual de Python y dependencias base en `requirements.txt`.
-- Configuración de credenciales mediante variables de entorno y `python-dotenv`.
-- Documentación inicial, roadmap y checklist de aprendizaje.
-- Configuración inicial de Git y publicación del proyecto.
+- Initial structure of the generative AI lab.
+- Python virtual environment and base dependencies in `requirements.txt`.
+- Credential configuration through environment variables and `python-dotenv`.
+- Initial documentation, roadmap, and learning checklist.
+- Initial Git configuration and project publication.
