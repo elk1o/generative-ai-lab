@@ -1,0 +1,18 @@
+*****************
+Splitting documents ['rag-lab/data/lideres_nba_25-26.pdf', 'rag-lab/data/triples_dobles_sports_illustrated.pdf']
+*****************
+Uploaded: rag-lab/data/lideres_nba_25-26.pdf → 6 página(s)
+Uploaded: rag-lab/data/triples_dobles_sports_illustrated.pdf → 6 página(s)
+Total pages uploaded on documents: 12
+Ingesting documents
+Uploaded document with 12 pages
+Document split in 79 chunks
+
+*****************
+Ingesting PDF data on ChromaDB on collection player_stats_multiple_sources
+*****************
+Info indexed on ChromaDB on collection player_stats_multiple_sources succesfully
+Checking collection player_stats_multiple_sources ...
+Number of splits on collection: 79
+Last 3 split IDs: ['cee2e208-746b-4c50-a3bb-52a228dd23df', 'e92a5814-01e9-4c09-8e64-91302dd80862', '58968954-abdc-4926-85e9-c98f9d36dce1']
+
