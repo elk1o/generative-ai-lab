@@ -46,13 +46,19 @@ TBD
 │   ├── data/
 │   │   ├── jokic_wikipedia.pdf
 │   │   ├── lideres_nba_25-26.pdf
-│   │   └── season_review_25-26.pdf
+│   │   ├── season_review_25-26.pdf
+│   │   └── triples_dobles_sports_illustrated.pdf
 │   └── gemini/
 │       ├── loaders.py
 │       ├── embeddings.py
 │       ├── embeddings.txt
 │       ├── final_rag.py
-│       └── final_rag.txt
+│       ├── final_rag.txt
+│       ├── multiple_sources_loaders.py
+│       ├── multiple_sources_embeddings.py
+│       ├── multiple_sources_embeddings.txt
+│       ├── multiple_sources_final_rag.py
+│       └── multiple_sources_final_rag.txt
 ├── llms-lab/
 │   ├── chatGPT/
 │   │   ├── main.py
@@ -132,6 +138,9 @@ python langchain-lab/gemini/memory.py > langchain-lab/gemini/memory.txt
 ```bash
 python rag-lab/gemini/embeddings.py > rag-lab/gemini/embeddings.txt
 python rag-lab/gemini/final_rag.py > rag-lab/gemini/final_rag.txt
+
+python rag-lab/gemini/multiple_sources_embeddings.py > rag-lab/gemini/multiple_sources_embeddings.txt
+python rag-lab/gemini/multiple_sources_final_rag.py > rag-lab/gemini/multiple_sources_final_rag.txt
 ```
 
 ## Why this project is relevant
