@@ -40,6 +40,7 @@ def load_PDF():
         )
 
         splits = splitter.split_documents(documentos)
+        # Also possible call splitter.create_documents(documentos). splits[0] returns first chunk
 
         print(f"Document split in {len(splits)} parts")
         print("")
