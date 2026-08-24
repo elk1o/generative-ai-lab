@@ -61,6 +61,13 @@ vectorstore = Chroma(
 # Retriever is the component that searches for relevant chunks
 retriever = vectorstore.as_retriever(search_kwargs={"k": 5})
 
+# Very interesting that other configuration. Search type mmr (maximal marginal relevance)
+# retrieves relevance but diversity too on results.
+# retriever = vectorstore.as_retriever(
+#     search_type="mmr",
+#     search_kwargs={"k": 6, "fetch_k": 20}
+# )
+
 # Check chromaDB chunks retrieved multi-source
 fragmentos_encontrados = retriever.invoke(GOAL_QUESTION)
 for i, doc in enumerate(fragmentos_encontrados, 1):
