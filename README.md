@@ -59,6 +59,11 @@ TBD
 │       ├── multiple_sources_embeddings.txt
 │       ├── multiple_sources_final_rag.py
 │       └── multiple_sources_final_rag.txt
+├── agents-lab/
+│   └── gemini/
+│       ├── react_agent.py
+│       ├── react_agent_template.py
+│       └── react_agent.txt
 ├── llms-lab/
 │   ├── chatGPT/
 │   │   ├── main.py
@@ -141,6 +146,12 @@ python rag-lab/gemini/final_rag.py > rag-lab/gemini/final_rag.txt
 
 python rag-lab/gemini/multiple_sources_embeddings.py > rag-lab/gemini/multiple_sources_embeddings.txt
 python rag-lab/gemini/multiple_sources_final_rag.py > rag-lab/gemini/multiple_sources_final_rag.txt
+```
+
+### Agents
+
+```bash
+python agents-lab/gemini/react_agent.py > agents-lab/gemini/react_agent.txt
 ```
 
 ## Why this project is relevant

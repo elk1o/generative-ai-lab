@@ -17,3 +17,9 @@ langchain-chroma>=0.2.0
 
 # Vectorial DB
 chromadb>=0.5.0
+
+# Langchain for Agents
+langchainhub>=0.1.15
+langchain-experimental>=0.3.0
+wikipedia>=1.4.0
+ddgs>=6.0.0

@@ -1,0 +1,7 @@
+*****************
+Creating ReAct agent
+*****************
+Question 1: Tell me about Nikola Jokic:
+
+
+[1m> Entering new AgentExecutor chain...[0m
