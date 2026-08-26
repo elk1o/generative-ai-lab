@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
-import os
+import os, wikipedia, time
 from langchain.prompts import PromptTemplate
 from langchain import hub
 from langchain.agents import Tool, AgentExecutor, initialize_agent, create_react_agent
@@ -8,7 +8,6 @@ from langchain_community.utilities import WikipediaAPIWrapper
 from langchain_experimental.tools import PythonREPLTool
 from langchain_google_genai import ChatGoogleGenerativeAI
 from agent_template import REACT_AGENT_PROMPT
-from guardrails_agent_template import GUARDRAILS_REACT_PROMPT
 
 load_dotenv()
 AISTUDIO_APIKEY = os.getenv('AISTUDIO_APIKEY')
@@ -41,8 +40,17 @@ python_repl_tool = Tool(
     description="Útil cuando necesitas usar Python para responder preguntas. Debes introducir código Python"
 )
 
+
 # Tool 2: Wikipedia search support
-wikipedia = WikipediaQueryRun(api_wrapper=WikipediaAPIWrapper())
+# Setting up headers to avoid API blocks
+wikipedia.set_user_agent("MiAgenteIA/1.0 (elk1o.dev@gmail.com)")
+wikipedia.set_lang("en")  # O "es" según la versión de Wikipedia que prefieras
+# Setting up limits on Wrapper
+wiki_wrapper = WikipediaAPIWrapper(
+    top_k_results=1,
+    doc_content_chars_max=1000
+)
+wikipedia = WikipediaQueryRun(api_wrapper=wiki_wrapper)
 wikipedia_tool = Tool(
     name="Wikipedia",
     func=wikipedia.run,
@@ -70,16 +78,21 @@ print("*****************")
 agent_executor = AgentExecutor(
     agent=agent,
     tools=agent_tools,
-    verbose=True,
+    verbose=False,
     handle_parsing_errors=True,
     max_iterations=5
 )
 
 for i, question in enumerate(GOAL_QUESTIONS, start=1):
 
-    print(f"Question {i}: {question}:")
-    output = agent_executor.invoke({
-        "input": prompt_template.format(q=question)
-    })
-    print(output)
-    print()
+    try:
+        print(f"Question {i}: {question}:")
+        output = agent_executor.invoke({
+            "input": prompt_template.format(q=question)
+        })
+        print(f"Answer {i}: {output['output']}")
+        print()
+        time.sleep(15) # Time sleep to avoid reach RPM limit on aistudio apikey
+
+    except Exception as e:
+            print(f"ERROR: Error procesando la pregunta {i}: {e}")
