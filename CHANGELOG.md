@@ -8,11 +8,25 @@ The project follows an educational version of [Semantic Versioning](https://semv
 - `MINOR`: a new concept, integration, or functional example.
 - `PATCH`: a bug fix, configuration adjustment, or documentation improvement.
 
-## [Unreleased]
+## [0.11.1] - Security guardrails
 
-### Planned
+### Added
 
-- Continue with agents according to the roadmap.
+- Use of security guardrails to make AI workflows safer and more controlled.
+- Input and output constraints to reduce unsafe, irrelevant, or unexpected model behavior.
+
+## [0.11.0] - ReAct agent with tools
+
+### Added
+
+- ReAct agent in `react_agent.py` using Gemini and LangChain.
+- Custom ReAct prompt template in `react_agent_template.py`.
+- Python REPL tool for executing Python code when needed.
+- Wikipedia tool for querying information about people, countries, and topics.
+- DuckDuckGo search tool for retrieving information from the internet.
+- `AgentExecutor` configuration with verbose execution, parsing error handling, and a maximum of five iterations.
+- Example questions covering general knowledge, current information, and Fibonacci sequence generation.
+- Output saved to `agents-lab/gemini/react_agent.txt`.
 
 ## [0.10.0] - Multi-source RAG
 

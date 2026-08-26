@@ -1,0 +1,21 @@
+*****************
+Creating ReAct agent
+*****************
+Question 1: Tell me about Nikola Jokic:
+Answer 1: Nikola Jokić (nacido el 19 de febrero de 1995) es un jugador de baloncesto profesional serbio que se desempeña como pívot para los Denver Nuggets en la NBA. Es ampliamente reconocido como uno de los mejores jugadores y pívots de todos los tiempos, y a menudo se le considera el mayor "robo" del draft en la historia de la liga, habiendo sido seleccionado en la posición 41 en la segunda ronda del draft de 2014.
+
+Entre sus logros más destacados se encuentran:
+- Tres veces ganador del premio al Jugador Más Valioso (MVP) de la NBA.
+- Ocho veces seleccionado para el All-Star de la NBA.
+- Ocho veces miembro del equipo All-NBA (incluyendo seis selecciones en el primer equipo).
+- Con la selección nacional de Serbia, ha ganado una medalla de plata en los Juegos Olímpicos de Río 2016 y una medalla de bronce en los Juegos Olímpicos de París 2024.
+
+Es apodado "Joker" y es conocido por su excepcional visión de juego y habilidades como pasador, lo que lo convierte en una figura única en su posición.
+
+Question 2: What country was the last FIFA WC champions?:
+Answer 2: El actual campeón de la Copa Mundial de la FIFA es España, tras ganar el torneo en la edición de 2026.
+
+Question 3: Tell me the first 50 of fibonacci sequence:
+Answer 3: Los primeros 50 números de la secuencia de Fibonacci son:
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229, 832040, 1346269, 2178309, 3524578, 5702887, 9227465, 14930352, 24157817, 39088169, 63245986, 102334155, 165580141, 267914296, 433494437, 701408733, 1134903170, 1836311903, 2971215073, 4807526976, 7778742049.
+

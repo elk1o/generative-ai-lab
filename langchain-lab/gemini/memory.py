@@ -1,7 +1,5 @@
 from dotenv import load_dotenv
 import os
-from dotenv import load_dotenv
-import os
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
 
