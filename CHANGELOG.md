@@ -8,6 +8,17 @@ The project follows an educational version of [Semantic Versioning](https://semv
 - `MINOR`: a new concept, integration, or functional example.
 - `PATCH`: a bug fix, configuration adjustment, or documentation improvement.
 
+## [0.12.0] - Agent with custom tools
+
+### Added
+
+- Custom tools agent in `agents-lab/gemini/custom_tools/custom_tools_agent.py` using Gemini and LangChain.
+- Google Calendar API integration to retrieve the week's events across calendars.
+- Open-Meteo API integration to retrieve the seven-day weather forecast without an API key.
+- Combined calendar and weather briefing to identify potential conflicts with in-person events.
+- Web search tool to add context about relevant meetings, people, or companies.
+- Output saved to `agents-lab/gemini/custom_tools/custom_tools_agent.txt`.
+
 ## [0.11.1] - Security guardrails
 
 ### Added
@@ -26,7 +37,7 @@ The project follows an educational version of [Semantic Versioning](https://semv
 - DuckDuckGo search tool for retrieving information from the internet.
 - `AgentExecutor` configuration with verbose execution, parsing error handling, and a maximum of five iterations.
 - Example questions covering general knowledge, current information, and Fibonacci sequence generation.
-- Output saved to `agents-lab/gemini/react_agent.txt`.
+- Output saved to `agents-lab/gemini/multitool/react_agent.txt`.
 
 ## [0.10.0] - Multi-source RAG
 

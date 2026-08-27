@@ -224,3 +224,7 @@ __marimo__/
 
 # Chroma DB
 chroma_db/
+
+# Google secrets
+credentials.json
+token.json
