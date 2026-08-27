@@ -23,3 +23,12 @@ langchainhub>=0.1.15
 langchain-experimental>=0.3.0
 wikipedia>=1.4.0
 ddgs>=6.0.0
+
+# Google
+google-auth>=2.30.0
+google-auth-oauthlib>=1.2.0
+google-auth-httplib2>=0.2.0
+google-api-python-client>=2.140.0
+
+# HTTP requests (tool de tiempo — Open-Meteo)
+requests>=2.31.0
