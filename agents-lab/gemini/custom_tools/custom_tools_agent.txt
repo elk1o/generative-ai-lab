@@ -1,0 +1,41 @@
+*****************
+Creating ReAct agent with custom tools (Google calendar, open meteo)
+*****************
+Generando tu briefing semanaL...
+
+============================================================
+### 📅 Briefing Semanal: 27/08 - 30/08
+
+**1. RESUMEN DE LA SEMANA**
+Tienes un total de **13 eventos** registrados hasta el domingo. El día más cargado es el **domingo 30/08**, con 3 eventos deportivos programados.
+
+**2. AGENDA DÍA A DÍA**
+*   **Jueves 27/08:**
+    *   *Todo el día:* Cumpleaños de Rigoberta Goncalves.
+    *   *18:30:* Celta de Vigo - CA Osasuna (Balaídos).
+    *   *19:00:* FC Barcelona - Athletic de Bilbao (Camp Nou).
+    *   *20:00:* Entreno 🏀 (OAKA Arena).
+    *   *Tiempo:* 16°C - 22°C, **90% probabilidad de lluvia.**
+*   **Viernes 28/08:**
+    *   *17:00:* Racing de Santander - Elche CF (El Sardinero).
+    *   *19:30:* Deportivo Alavés - Villarreal (Mendizorrotza).
+    *   *Tiempo:* 12°C - 25°C, despejado.
+*   **Sábado 29/08:**
+    *   *15:00:* Levante - Real Betis (Ciutat de València).
+    *   *17:00:* Real Sociedad - Espanyol (Reale Arena).
+    *   *19:30:* Sevilla FC - Atlético Madrid (Sánchez Pizjuán).
+    *   *Tiempo:* 15°C - 30°C, soleado.
+*   **Domingo 30/08:**
+    *   *15:00:* Real Madrid - Málaga (Santiago Bernabéu).
+    *   *17:30:* Deportivo la Coruña - Valencia (Riazor).
+    *   *19:30:* Celta de Vigo - Athletic de Bilbao (Balaídos).
+    *   *Tiempo:* 17°C - 33°C, soleado.
+
+**3. AVISOS**
+*   **⚠️ Atención:** Tu entrenamiento de baloncesto de hoy jueves (20:00) coincide con una **alta probabilidad de lluvia (90%)**. Asegúrate de llevar ropa adecuada o verificar si la instalación cuenta con pistas cubiertas.
+
+**4. CONTEXTO RELEVANTE**
+*   No se han detectado reuniones con empresas o clientes que requieran investigación externa adicional.
+
+**5. CONSEJO DEL DÍA**
+Dado que el fin de semana las temperaturas subirán hasta los 33°C, aprovecha el jueves para organizar tus tareas de interior y deja las actividades al aire libre para cuando el tiempo sea más estable. ¡Mantente hidratado!
