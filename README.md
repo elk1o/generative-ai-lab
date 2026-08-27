@@ -61,9 +61,15 @@ TBD
 │       └── multiple_sources_final_rag.txt
 ├── agents-lab/
 │   └── gemini/
-│       ├── react_agent.py
-│       ├── react_agent_template.py
-│       └── react_agent.txt
+│       ├── custom_tools/
+│       │   ├── agent_template.py
+│       │   ├── custom_tools_agent.py
+│       │   └── custom_tools_agent.txt
+│       └── multitools/
+│           ├── agent_template.py
+│           ├── react_agent.py
+│           ├── react_agent.txt
+│           └── react_agent_verbose.txt
 ├── llms-lab/
 │   ├── chatGPT/
 │   │   ├── main.py
@@ -151,7 +157,8 @@ python rag-lab/gemini/multiple_sources_final_rag.py > rag-lab/gemini/multiple_so
 ### Agents
 
 ```bash
-python agents-lab/gemini/react_agent.py > agents-lab/gemini/react_agent.txt
+python agents-lab/gemini/multitools/react_agent.py > agents-lab/gemini/multitools/react_agent.txt
+python agents-lab/gemini/custom_tools/custom_tools_agent.py > agents-lab/gemini/custom_tools/custom_tools_agent.txt
 ```
 
 ## Why this project is relevant
