@@ -23,3 +23,8 @@ langchainhub>=0.1.15
 langchain-experimental>=0.3.0
 wikipedia>=1.4.0
 ddgs>=6.0.0
+
+# Google assistant lab
+google-auth>=2.20.0
+google-auth-oauthlib>=1.0.0
+google-assistant-grpc>=0.3.0
