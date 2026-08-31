@@ -8,6 +8,15 @@ The project follows an educational version of [Semantic Versioning](https://semv
 - `MINOR`: a new concept, integration, or functional example.
 - `PATCH`: a bug fix, configuration adjustment, or documentation improvement.
 
+## [0.13.0] - LangGraph loop workflow
+
+### Added
+
+- Multi-step LangGraph orchestration in `langgraph-lab/gemini/loop_langgraph.py`.
+- Iterative graph-based workflow for agent coordination and loop execution.
+- Output saved to `langgraph-lab/gemini/loop_langgraph.txt`.
+- Exploration of LangGraph patterns for multi-agent and stateful reasoning flows.
+
 ## [0.12.0] - Agent with custom tools
 
 ### Added

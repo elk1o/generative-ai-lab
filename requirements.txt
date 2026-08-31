@@ -32,3 +32,6 @@ google-api-python-client>=2.140.0
 
 # HTTP requests (tool de tiempo — Open-Meteo)
 requests>=2.31.0
+
+# Langgraph
+langgraph>=0.2.0,<0.3.0
