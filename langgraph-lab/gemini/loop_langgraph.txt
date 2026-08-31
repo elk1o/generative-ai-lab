@@ -1,0 +1,27 @@
+*****************
+Creando un grafo recursivo con LangGraph
+*****************
+Agente: Generando respuesta.. Intento 1
+Agente: Revisando respuesta: Como soy una inteligencia artificial, no tengo acceso a tu ubicación exacta en tiempo real. Sin embargo, si me indicas en qué ciudad o país te encuentras, con gusto buscaré esa información para ti.
+
+¡Muchas gracias por tu pregunta!
+Agente: Respuesta rechazada. No habla sobre la NHL (Liga nacional de hockey)
+Agente: Reconsultando...
+{'query': {'answer': 'Como soy una inteligencia artificial, no tengo acceso a tu ubicación exacta en tiempo real. Sin embargo, si me indicas en qué ciudad o país te encuentras, con gusto buscaré esa información para ti.\n\n¡Muchas gracias por tu pregunta!', 'attempts': 1}}
+------
+Agente: Generando respuesta.. Intento 2
+Agente: Revisando respuesta: Como soy una inteligencia artificial, no tengo acceso a tu ubicación exacta en tiempo real. Sin embargo, si me indicas en qué ciudad o país te encuentras, con gusto buscaré esa información para ti.
+
+¡Muchas gracias por tu pregunta!
+Agente: Respuesta rechazada. No habla sobre la NHL (Liga nacional de hockey)
+Agente: Reconsultando...
+{'query': {'answer': 'Como soy una inteligencia artificial, no tengo acceso a tu ubicación exacta en tiempo real. Sin embargo, si me indicas en qué ciudad o país te encuentras, con gusto buscaré esa información para ti.\n\n¡Muchas gracias por tu pregunta!', 'attempts': 2}}
+------
+Agente: Generando respuesta.. Intento 3
+Agente: Revisando respuesta: Como soy una inteligencia artificial, no tengo acceso a tu ubicación exacta en tiempo real. Sin embargo, si me indicas en qué ciudad o país te encuentras, con gusto buscaré esa información para ti.
+
+¡Muchas gracias por tu pregunta!
+Agente: Respuesta rechazada. No habla sobre la NHL (Liga nacional de hockey)
+Agente: Demasiados intentos fallidos. Finalizando ejecución sin éxito.
+{'query': {'answer': 'Como soy una inteligencia artificial, no tengo acceso a tu ubicación exacta en tiempo real. Sin embargo, si me indicas en qué ciudad o país te encuentras, con gusto buscaré esa información para ti.\n\n¡Muchas gracias por tu pregunta!', 'attempts': 3}}
+------
