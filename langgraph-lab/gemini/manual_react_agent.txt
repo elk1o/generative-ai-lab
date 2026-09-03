@@ -1,0 +1,88 @@
+
+*****************
+Creando un grafo de un agente react con LangGraph
+****************
+
+Grafo compilado, listo para ejecutar
+
+
+ --- Iniciando agente con la pregunta: "
+Compara el rendimiento de Nikola Jokic en tres contextos distintos: sus estadísticas
+en la temporada regular NBA más reciente, su rendimiento con la selección de Serbia
+en el último EuroBasket o competición internacional en la que participó, y cuántos
+triples-dobles lleva en su carrera NBA hasta la fecha. Con esos tres datos, dame una
+valoración de en cuál de los tres contextos ha sido estadísticamente más dominante.
+" ---
+=== Nodo de razonamiento ===
+Decisión del LLM: Thought: Necesito obtener las estadísticas de Nikola Jokic en la temporada regular NBA 2023-2024 para poder realizar la comparación.
+
+Action: ¿Cuáles fueron las estadísticas promedio de Nikola Jokic en la temporada regular NBA 2023-2024?
+{'think': {'messages': ['Thought: Necesito obtener las estadísticas de Nikola Jokic en la temporada regular NBA 2023-2024 para poder realizar la comparación.\n\nAction: ¿Cuáles fueron las estadísticas promedio de Nikola Jokic en la temporada regular NBA 2023-2024?'], 'next_action': 'Action'}}
+------
+=== Nodo de acción ===
+--- Usando herramienta LLM para la consulta ¿Cuáles fueron las estadísticas promedio de Nikola Jokic en la temporada regular NBA 2023-2024? ---
+Observation: En la temporada regular 2023-2024, Nikola Jokic promedió:
+
+*   **Puntos:** 26.4
+*   **Rebotes:** 12.4
+*   **Asistencias:** 9.0
+*   **Robos:** 1.4
+*   **Tapones:** 0.9
+{'action': {'messages': ['Observation: En la temporada regular 2023-2024, Nikola Jokic promedió:\n\n*   **Puntos:** 26.4\n*   **Rebotes:** 12.4\n*   **Asistencias:** 9.0\n*   **Robos:** 1.4\n*   **Tapones:** 0.9'], 'iterations': 1}}
+------
+=== Nodo de razonamiento ===
+Decisión del LLM: Thought: Necesito obtener las estadísticas de Nikola Jokic en su última competición internacional con la selección de Serbia (Juegos Olímpicos de París 2024) para poder realizar la comparación solicitada.
+
+Action: ¿Cuáles fueron las estadísticas promedio de Nikola Jokic con la selección de Serbia en los Juegos Olímpicos de París 2024?
+{'think': {'messages': ['Thought: Necesito obtener las estadísticas de Nikola Jokic en su última competición internacional con la selección de Serbia (Juegos Olímpicos de París 2024) para poder realizar la comparación solicitada.\n\nAction: ¿Cuáles fueron las estadísticas promedio de Nikola Jokic con la selección de Serbia en los Juegos Olímpicos de París 2024?'], 'next_action': 'Action'}}
+------
+=== Nodo de acción ===
+--- Usando herramienta LLM para la consulta ¿Cuáles fueron las estadísticas promedio de Nikola Jokic con la selección de Serbia en los Juegos Olímpicos de París 2024? ---
+Observation: En los Juegos Olímpicos de París 2024, Nikola Jokić promedió **18.8 puntos, 10.7 rebotes y 8.7 asistencias** por partido.
+{'action': {'messages': ['Observation: En los Juegos Olímpicos de París 2024, Nikola Jokić promedió **18.8 puntos, 10.7 rebotes y 8.7 asistencias** por partido.'], 'iterations': 2}}
+------
+=== Nodo de razonamiento ===
+Decisión del LLM: Thought: Ya tengo las estadísticas de la temporada regular 2023-2024 y las de los Juegos Olímpicos de París 2024. Solo me falta obtener el dato sobre el número total de triples-dobles de Nikola Jokic en su carrera en la NBA para completar la comparativa y realizar la valoración final.
+
+Action: ¿Cuántos triples-dobles ha registrado Nikola Jokic en su carrera en la NBA hasta la fecha?
+{'think': {'messages': ['Thought: Ya tengo las estadísticas de la temporada regular 2023-2024 y las de los Juegos Olímpicos de París 2024. Solo me falta obtener el dato sobre el número total de triples-dobles de Nikola Jokic en su carrera en la NBA para completar la comparativa y realizar la valoración final.\n\nAction: ¿Cuántos triples-dobles ha registrado Nikola Jokic en su carrera en la NBA hasta la fecha?'], 'next_action': 'Action'}}
+------
+=== Nodo de acción ===
+--- Usando herramienta LLM para la consulta ¿Cuántos triples-dobles ha registrado Nikola Jokic en su carrera en la NBA hasta la fecha? ---
+Observation: Hasta la fecha, Nikola Jokić ha registrado **136 triples-dobles** en temporada regular en su carrera en la NBA.
+{'action': {'messages': ['Observation: Hasta la fecha, Nikola Jokić ha registrado **136 triples-dobles** en temporada regular en su carrera en la NBA.'], 'iterations': 3}}
+------
+=== Nodo de razonamiento ===
+Decisión del LLM: Thought: Ya cuento con los tres datos necesarios: las estadísticas de la temporada regular 2023-2024 (26.4 pts, 12.4 reb, 9.0 ast), las estadísticas de los Juegos Olímpicos de París 2024 (18.8 pts, 10.7 reb, 8.7 ast) y el total histórico de triples-dobles en la NBA (136). Con esta información puedo proceder a realizar la comparativa y la valoración solicitada.
+
+Action: END.
+{'think': {'messages': ['Thought: Ya cuento con los tres datos necesarios: las estadísticas de la temporada regular 2023-2024 (26.4 pts, 12.4 reb, 9.0 ast), las estadísticas de los Juegos Olímpicos de París 2024 (18.8 pts, 10.7 reb, 8.7 ast) y el total histórico de triples-dobles en la NBA (136). Con esta información puedo proceder a realizar la comparativa y la valoración solicitada.\n\nAction: END.'], 'next_action': 'END'}}
+------
+=== Nodo de respuesta final ===
+{'answer': {'messages': ['Para evaluar el dominio estadístico de Nikola Jokić, es necesario analizar su rendimiento bajo diferentes estructuras de juego, reglas y niveles de exigencia. A continuación, presento la comparativa basada en los datos solicitados:\n\n### 1. Comparativa de Rendimiento\n\n| Contexto | Puntos | Rebotes | Asistencias |\n| :--- | :---: | :---: | :---: |\n| **Temporada Regular NBA (2023-2024)** | 26.4 | 12.4 | 9.0 |\n| **Juegos Olímpicos París 2024** | 18.8 | 10.7 | 8.7 |\n\n*   **Triples-dobles en carrera (NBA):** 136 (cifra que lo consolida como uno de los mejores pasadores y reboteadores de la historia de la liga).\n\n---\n\n### 2. Valoración: ¿Dónde es estadísticamente más dominante?\n\nSi analizamos el dominio estadístico puro, **la temporada regular de la NBA es el contexto donde Jokić es más dominante**, y aquí las razones:\n\n*   **Volumen y Eficiencia:** En la NBA, Jokić opera bajo un sistema diseñado para maximizar sus virtudes durante 82 partidos. Sus promedios de 26.4 puntos y 12.4 rebotes superan significativamente sus registros internacionales. La diferencia en puntos (casi 8 puntos más por partido) se debe principalmente a que en la NBA él es el eje absoluto de la ofensiva de los Nuggets, mientras que en el baloncesto FIBA (Juegos Olímpicos) el juego es más colectivo, los partidos son más cortos (40 minutos vs 48) y el ritmo de posesiones es menor.\n*   **El factor "Triple-Doble":** La cifra de 136 triples-dobles es el indicador definitivo de su dominio. Este dato demuestra que su capacidad para influir en todas las facetas del juego no es un evento aislado, sino una constante estadística que ha mantenido durante años. En la NBA, Jokić ha logrado "normalizar" lo extraordinario, convirtiendo el triple-doble en una estadística recurrente.\n*   **Contexto Internacional:** Aunque sus números en París 2024 fueron ligeramente inferiores, es importante notar que su impacto fue igualmente masivo. En el baloncesto FIBA, donde las defensas son más cerradas y el espacio es menor, promediar casi un triple-doble (18.8/10.7/8.7) es una muestra de dominio absoluto, quizás incluso más difícil de lograr que en la NBA debido a la naturaleza del juego.\n\n**Conclusión:**\nEstadísticamente, **Jokić es más dominante en la NBA**. La combinación de su volumen anotador, su capacidad reboteadora y la frecuencia histórica con la que registra triples-dobles lo sitúan en un nivel de producción que no tiene comparación en el baloncesto actual. Sin embargo, su rendimiento en los Juegos Olímpicos demuestra que su estilo de juego es altamente adaptable y efectivo incluso bajo las reglas y el estilo de juego más restrictivo del baloncesto internacional.']}}
+------
+--- Ejecución finalizada ---
+Respuesta final del agente: 
+Para evaluar el dominio estadístico de Nikola Jokić, es necesario analizar su rendimiento bajo diferentes estructuras de juego, reglas y niveles de exigencia. A continuación, presento la comparativa basada en los datos solicitados:
+
+### 1. Comparativa de Rendimiento
+
+| Contexto | Puntos | Rebotes | Asistencias |
+| :--- | :---: | :---: | :---: |
+| **Temporada Regular NBA (2023-2024)** | 26.4 | 12.4 | 9.0 |
+| **Juegos Olímpicos París 2024** | 18.8 | 10.7 | 8.7 |
+
+*   **Triples-dobles en carrera (NBA):** 136 (cifra que lo consolida como uno de los mejores pasadores y reboteadores de la historia de la liga).
+
+---
+
+### 2. Valoración: ¿Dónde es estadísticamente más dominante?
+
+Si analizamos el dominio estadístico puro, **la temporada regular de la NBA es el contexto donde Jokić es más dominante**, y aquí las razones:
+
+*   **Volumen y Eficiencia:** En la NBA, Jokić opera bajo un sistema diseñado para maximizar sus virtudes durante 82 partidos. Sus promedios de 26.4 puntos y 12.4 rebotes superan significativamente sus registros internacionales. La diferencia en puntos (casi 8 puntos más por partido) se debe principalmente a que en la NBA él es el eje absoluto de la ofensiva de los Nuggets, mientras que en el baloncesto FIBA (Juegos Olímpicos) el juego es más colectivo, los partidos son más cortos (40 minutos vs 48) y el ritmo de posesiones es menor.
+*   **El factor "Triple-Doble":** La cifra de 136 triples-dobles es el indicador definitivo de su dominio. Este dato demuestra que su capacidad para influir en todas las facetas del juego no es un evento aislado, sino una constante estadística que ha mantenido durante años. En la NBA, Jokić ha logrado "normalizar" lo extraordinario, convirtiendo el triple-doble en una estadística recurrente.
+*   **Contexto Internacional:** Aunque sus números en París 2024 fueron ligeramente inferiores, es importante notar que su impacto fue igualmente masivo. En el baloncesto FIBA, donde las defensas son más cerradas y el espacio es menor, promediar casi un triple-doble (18.8/10.7/8.7) es una muestra de dominio absoluto, quizás incluso más difícil de lograr que en la NBA debido a la naturaleza del juego.
+
+**Conclusión:**
+Estadísticamente, **Jokić es más dominante en la NBA**. La combinación de su volumen anotador, su capacidad reboteadora y la frecuencia histórica con la que registra triples-dobles lo sitúan en un nivel de producción que no tiene comparación en el baloncesto actual. Sin embargo, su rendimiento en los Juegos Olímpicos demuestra que su estilo de juego es altamente adaptable y efectivo incluso bajo las reglas y el estilo de juego más restrictivo del baloncesto internacional.

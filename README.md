@@ -74,7 +74,9 @@ TBD
 │   └── gemini/
 │       ├── basic_langchain.py
 │       ├── loop_langgraph.py
-│       └── loop_langgraph.txt
+│       ├── loop_langgraph.txt
+│       ├── manual_react_agent.py
+│       └── manual_react_agent.txt
 ├── llms-lab/
 │   ├── chatGPT/
 │   │   ├── main.py
@@ -166,9 +168,10 @@ python agents-lab/gemini/multitools/react_agent.py > agents-lab/gemini/multitool
 python agents-lab/gemini/custom_tools/custom_tools_agent.py > agents-lab/gemini/custom_tools/custom_tools_agent.txt
 ```
 
-### LangGraph (Multiagents)
+### LangGraph
 ```bash
 python langgraph-lab/gemini/loop_langgraph.py > langgraph-lab/gemini/loop_langgraph.txt
+python langgraph-lab/gemini/manual_react_agent.py > langgraph-lab/gemini/manual_react_agent.txt
 ```
 
 ## Why this project is relevant
