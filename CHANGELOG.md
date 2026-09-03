@@ -8,6 +8,15 @@ The project follows an educational version of [Semantic Versioning](https://semv
 - `MINOR`: a new concept, integration, or functional example.
 - `PATCH`: a bug fix, configuration adjustment, or documentation improvement.
 
+## [0.14.0] - Manual ReAct agent with LangGraph
+
+### Added
+
+- Manual implementation of the ReAct pattern in `langgraph-lab/gemini/manual_react_agent.py` using LangGraph.
+- Explicit reasoning, acting, and observing loop to understand the internal mechanism of a ReAct agent.
+- Implementation built without using `create_react_agent` from `langgraph.prebuilt`.
+- Output saved to `langgraph-lab/gemini/manual_react_agent.txt`.
+
 ## [0.13.0] - LangGraph loop workflow
 
 ### Added
