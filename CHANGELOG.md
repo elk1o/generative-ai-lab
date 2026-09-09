@@ -8,6 +8,15 @@ The project follows an educational version of [Semantic Versioning](https://semv
 - `MINOR`: a new concept, integration, or functional example.
 - `PATCH`: a bug fix, configuration adjustment, or documentation improvement.
 
+## [0.15.0] - Fan-out/fan-in workflow with LangGraph
+
+### Added
+
+- Fan-out/fan-in workflow in `langgraph-lab/gemini/fan_out_fan_in.py` using LangGraph.
+- Parallel branches that make separate LLM calls for independent analyses.
+- Fan-in step that combines the branch results into a final response through another LLM call.
+- Output saved to `langgraph-lab/gemini/fan_out_fan_in.txt`.
+
 ## [0.14.0] - Manual ReAct agent with LangGraph
 
 ### Added
