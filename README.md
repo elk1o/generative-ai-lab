@@ -76,7 +76,9 @@ TBD
 │       ├── loop_langgraph.py
 │       ├── loop_langgraph.txt
 │       ├── manual_react_agent.py
-│       └── manual_react_agent.txt
+│       ├── manual_react_agent.txt
+│       ├── fan_out_fan_in.py
+│       └── fan_out_fan_in.txt
 ├── llms-lab/
 │   ├── chatGPT/
 │   │   ├── main.py
@@ -172,6 +174,7 @@ python agents-lab/gemini/custom_tools/custom_tools_agent.py > agents-lab/gemini/
 ```bash
 python langgraph-lab/gemini/loop_langgraph.py > langgraph-lab/gemini/loop_langgraph.txt
 python langgraph-lab/gemini/manual_react_agent.py > langgraph-lab/gemini/manual_react_agent.txt
+python langgraph-lab/gemini/fan_out_fan_in.py > langgraph-lab/gemini/fan_out_fan_in.txt
 ```
 
 ## Why this project is relevant
