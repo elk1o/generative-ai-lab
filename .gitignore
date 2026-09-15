@@ -228,3 +228,6 @@ chroma_db/
 # Google secrets
 credentials.json
 token.json
+
+# Sqlite
+db/

@@ -8,6 +8,43 @@ The project follows an educational version of [Semantic Versioning](https://semv
 - `MINOR`: a new concept, integration, or functional example.
 - `PATCH`: a bug fix, configuration adjustment, or documentation improvement.
 
+## [0.16.0] - Persistent memory with SQLite database
+
+### Added
+
+- Memory workflow in `langgraph-lab/gemini/memory.py` using `SqliteSaver` and a SQLite database connection.
+- Thread-based conversation memory through the `thread_id` field, allowing persistent context across repeated interactions.
+- Fan-out stage for cleaning, summarizing, keyword extraction, and urgency detection in parallel.
+- Fan-in stage that composes a customer profile using the current message together with previous history.
+- Execution outputs saved to `langgraph-lab/gemini/memory_exec_1.txt`, `memory_exec_2.txt`, and `memory_exec_3.txt`.
+
+## [0.15.0] - Fan-out/fan-in workflow with LangGraph
+
+### Added
+
+- Fan-out/fan-in workflow in `langgraph-lab/gemini/fan_out_fan_in.py` using LangGraph.
+- Parallel branches that make separate LLM calls for independent analyses.
+- Fan-in step that combines the branch results into a final response through another LLM call.
+- Output saved to `langgraph-lab/gemini/fan_out_fan_in.txt`.
+
+## [0.14.0] - Manual ReAct agent with LangGraph
+
+### Added
+
+- Manual implementation of the ReAct pattern in `langgraph-lab/gemini/manual_react_agent.py` using LangGraph.
+- Explicit reasoning, acting, and observing loop to understand the internal mechanism of a ReAct agent.
+- Implementation built without using `create_react_agent` from `langgraph.prebuilt`.
+- Output saved to `langgraph-lab/gemini/manual_react_agent.txt`.
+
+## [0.13.0] - LangGraph loop workflow
+
+### Added
+
+- Multi-step LangGraph orchestration in `langgraph-lab/gemini/loop_langgraph.py`.
+- Iterative graph-based workflow for agent coordination and loop execution.
+- Output saved to `langgraph-lab/gemini/loop_langgraph.txt`.
+- Exploration of LangGraph patterns for multi-agent and stateful reasoning flows.
+
 ## [0.12.0] - Agent with custom tools
 
 ### Added

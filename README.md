@@ -70,6 +70,19 @@ TBD
 │           ├── react_agent.py
 │           ├── react_agent.txt
 │           └── react_agent_verbose.txt
+├── langgraph-lab/
+│   └── gemini/
+│       ├── basic_langchain.py
+│       ├── fan_out_fan_in.py
+│       ├── fan_out_fan_in.txt
+│       ├── loop_langgraph.py
+│       ├── loop_langgraph.txt
+│       ├── manual_react_agent.py
+│       ├── manual_react_agent.txt
+│       ├── memory.py
+│       ├── memory_exec_1.txt
+│       ├── memory_exec_2.txt
+│       └── memory_exec_3.txt
 ├── llms-lab/
 │   ├── chatGPT/
 │   │   ├── main.py
@@ -159,6 +172,21 @@ python rag-lab/gemini/multiple_sources_final_rag.py > rag-lab/gemini/multiple_so
 ```bash
 python agents-lab/gemini/multitools/react_agent.py > agents-lab/gemini/multitools/react_agent.txt
 python agents-lab/gemini/custom_tools/custom_tools_agent.py > agents-lab/gemini/custom_tools/custom_tools_agent.txt
+```
+
+### LangGraph
+```bash
+python langgraph-lab/gemini/loop_langgraph.py > langgraph-lab/gemini/loop_langgraph.txt
+python langgraph-lab/gemini/manual_react_agent.py > langgraph-lab/gemini/manual_react_agent.txt
+python langgraph-lab/gemini/fan_out_fan_in.py > langgraph-lab/gemini/fan_out_fan_in.txt
+python langgraph-lab/gemini/history.py > langgraph-lab/gemini/fan_out_fan_in.txt
+
+'Memoria 1ª ejecución:'
+python langgraph-lab/gemini/memory.py "Hola, buenas tardes. Quiero saber el precio de la licencia para 5 usuarios y si tienen demo disponible" "client-1" > langgraph-lab/gemini/memory_exec_1.txt
+'Memoria 2ª ejecución:'
+python langgraph-lab/gemini/memory.py "Ya vi el precio, gracias. Ahora tengo un problema urgente con el acceso a la plataforma, no puedo entrar" "client-1" > langgraph-lab/gemini/memory_exec_2.txt
+'Memoria 3ª ejecución:'
+python langgraph-lab/gemini/memory.py "Buenas, llevo dos días respuesta sobre el problema de acceso. Es inadmisible. Si no se soluciona hoy mismo me iré a la competencia" "client-1" > langgraph-lab/gemini/memory_exec_3.txt
 ```
 
 ## Why this project is relevant

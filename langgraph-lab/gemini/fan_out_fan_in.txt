@@ -1,0 +1,39 @@
+
+*****************
+Creando un grafo fan-out fan-in en Langgraph con llamadas LLM para enriquecer la información
+****************
+
+Superstep 1: START
+Superstep 2: Mensaje de input de usuario:
+
+    Hola, necesito una demo del producto y saber el precio de la licencia. Es urgente para hoy.
+
+Superstep 3: Limpiar mensaje:
+Hola, necesito una demo del producto y saber el precio de la licencia. Es urgente para hoy.
+Superstep 4 en paralelo: Resumir mensaje:
+Solicito demo y precio de licencia. Es urgente para hoy...
+Superstep 4 en paralelo: Extraer palabras clave
+demo, producto, precio, licencia
+Superstep 4 en paralelo: Determinar urgencia
+Alta
+Superstep 5: Crear ficha de usuario
+FICHA DE CONTEXTO PARA AGENTE COMERCIAL
+
+---
+
+SOLICITUD DEL CLIENTE:
+El cliente requiere una demostración del producto y conocer el precio de la licencia.
+
+NIVEL DE URGENCIA:
+Alta (El cliente solicita atención para el día de hoy).
+
+PALABRAS CLAVE:
+Demo, producto, precio, licencia.
+
+ACCIONES RECOMENDADAS:
+1. Contactar de inmediato para agendar la demo.
+2. Preparar propuesta de precios/licenciamiento.
+3. Priorizar esta gestión debido a la urgencia manifestada.
+Superstep final: END
+Orden de ejecución:
+['Recibir mensaje de usuario', 'Limpiar mensaje de usuario', 'Extraer palabras clave', 'Determinar urgencia', 'Acortar el mensaje a 90 caracteres', 'Crear ficha del cliente']

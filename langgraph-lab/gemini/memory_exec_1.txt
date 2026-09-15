@@ -1,0 +1,44 @@
+
+    *****************
+    Creando un grafo fan-out fan-in en Langgraph con memoria
+    ****************
+    
+Superstep 2: Mensaje de input de usuario:
+Hola, buenas tardes. Quiero saber el precio de la licencia para 5 usuarios y si tienen demo disponible
+Recibido thread_id interno: client-1
+Superstep 3: Limpiar mensaje:
+Hola, buenas tardes. Quiero saber el precio de la licencia para 5 usuarios y si tienen demo disponible
+Superstep 4 en paralelo: Determinar urgencia
+Baja
+Superstep 4 en paralelo: Resumir mensaje:
+Precio licencia 5 usuarios y disponibilidad de demo...
+Superstep 4 en paralelo: Extraer palabras clave
+precio, licencia, usuarios, demo
+Superstep 5: Comprobar si existe historial
+Historial previo no encontrado
+Superstep 6: Crear ficha de usuario en función de los siguientes datos:
+
+        - Mensaje: Hola, buenas tardes. Quiero saber el precio de la licencia para 5 usuarios y si tienen demo disponible
+        - Resumen del mensaje: Precio licencia 5 usuarios y disponibilidad de demo...
+        - Palabras clave detectadas: precio, licencia, usuarios, demo
+        - Urgencia detectada: Baja
+        - Historial: No hay interacciones previas registradas.
+    
+FICHA DE CONTEXTO COMERCIAL
+
+CLIENTE: Nuevo contacto (Sin historial previo)
+
+RESUMEN DE LA SOLICITUD:
+El cliente solicita información sobre el costo de una licencia para 5 usuarios y consulta por la disponibilidad de una versión de prueba (demo).
+
+PALABRAS CLAVE:
+Precio, licencia, usuarios, demo.
+
+NIVEL DE URGENCIA:
+Baja.
+
+RECOMENDACIÓN PARA EL AGENTE:
+1. Saludar cordialmente y agradecer el interés.
+2. Proporcionar el esquema de precios para el plan de 5 usuarios.
+3. Confirmar la disponibilidad de la demo y ofrecer una breve sesión guiada o acceso a prueba.
+4. Consultar el sector o necesidad específica del cliente para personalizar la oferta.
