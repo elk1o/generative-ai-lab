@@ -8,6 +8,16 @@ The project follows an educational version of [Semantic Versioning](https://semv
 - `MINOR`: a new concept, integration, or functional example.
 - `PATCH`: a bug fix, configuration adjustment, or documentation improvement.
 
+## [0.16.0] - Persistent memory with SQLite database
+
+### Added
+
+- Memory workflow in `langgraph-lab/gemini/memory.py` using `SqliteSaver` and a SQLite database connection.
+- Thread-based conversation memory through the `thread_id` field, allowing persistent context across repeated interactions.
+- Fan-out stage for cleaning, summarizing, keyword extraction, and urgency detection in parallel.
+- Fan-in stage that composes a customer profile using the current message together with previous history.
+- Execution outputs saved to `langgraph-lab/gemini/memory_exec_1.txt`, `memory_exec_2.txt`, and `memory_exec_3.txt`.
+
 ## [0.15.0] - Fan-out/fan-in workflow with LangGraph
 
 ### Added

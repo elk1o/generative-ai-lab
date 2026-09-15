@@ -1,0 +1,43 @@
+
+    *****************
+    Creando un grafo fan-out fan-in en Langgraph con memoria
+    ****************
+    
+Superstep 2: Mensaje de input de usuario:
+Buenas, llevo dos días respuesta sobre el problema de acceso. Es inadmisible. Si no se soluciona hoy mismo me iré a la competencia
+Recibido thread_id interno: client-1
+Superstep 3: Limpiar mensaje:
+Buenas, llevo dos días respuesta sobre el problema de acceso. Es inadmisible. Si no se soluciona hoy mismo me iré a la competencia
+Superstep 4 en paralelo: Extraer palabras clave
+Soporte, acceso, cancelación.
+Superstep 4 en paralelo: Determinar urgencia
+Crítica
+Superstep 4 en paralelo: Resumir mensaje:
+Sin respuesta sobre el problema de acceso. Si no se soluciona hoy, me iré...
+Superstep 5: Comprobar si existe historial
+Historial encontrado para este thread_id: ['Hola, buenas tardes. Quiero saber el precio de la licencia para 5 usuarios y si tienen demo disponible', 'Ya vi el precio, gracias. Ahora tengo un problema urgente con el acceso a la plataforma, no puedo entrar']
+Superstep 6: Crear ficha de usuario en función de los siguientes datos:
+
+        - Mensaje: Buenas, llevo dos días respuesta sobre el problema de acceso. Es inadmisible. Si no se soluciona hoy mismo me iré a la competencia
+        - Resumen del mensaje: Sin respuesta sobre el problema de acceso. Si no se soluciona hoy, me iré...
+        - Palabras clave detectadas: Soporte, acceso, cancelación.
+        - Urgencia detectada: Crítica
+        - Historial: Historial previo del cliente:
+- Hola, buenas tardes. Quiero saber el precio de la licencia para 5 usuarios y si tienen demo disponible
+- Ya vi el precio, gracias. Ahora tengo un problema urgente con el acceso a la plataforma, no puedo entrar
+    
+FICHA DE CONTEXTO DEL CLIENTE
+
+ESTADO: Crítica
+PALABRAS CLAVE: Soporte, acceso, cancelación.
+
+RESUMEN DE LA SITUACIÓN:
+El cliente manifiesta un alto nivel de frustración debido a la falta de respuesta durante dos días respecto a un problema de acceso a la plataforma. Ha lanzado un ultimátum: si el problema no se resuelve hoy, cancelará el servicio y se trasladará a la competencia.
+
+HISTORIAL DEL CLIENTE:
+1. Consulta inicial: Solicitó información sobre precios para 5 usuarios y disponibilidad de demo.
+2. Seguimiento: Confirmó haber revisado los precios.
+3. Incidencia: Reportó un problema urgente de acceso a la plataforma (incapacidad de inicio de sesión).
+
+RECOMENDACIÓN PARA EL AGENTE:
+Prioridad máxima. Contactar de forma inmediata para resolver el bloqueo de acceso. Es necesario realizar una gestión de retención proactiva, reconociendo el retraso en la atención y ofreciendo una solución definitiva hoy mismo para evitar la pérdida del cliente.

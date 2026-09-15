@@ -1,0 +1,45 @@
+
+    *****************
+    Creando un grafo fan-out fan-in en Langgraph con memoria
+    ****************
+    
+Superstep 2: Mensaje de input de usuario:
+Ya vi el precio, gracias. Ahora tengo un problema urgente con el acceso a la plataforma, no puedo entrar
+Recibido thread_id interno: client-1
+Superstep 3: Limpiar mensaje:
+Ya vi el precio, gracias. Ahora tengo un problema urgente con el acceso a la plataforma, no puedo entrar
+Superstep 4 en paralelo: Resumir mensaje:
+Vi el precio, gracias. Tengo un problema urgente con el acceso a la plataforma, no puedo...
+Superstep 4 en paralelo: Determinar urgencia
+Alta
+Superstep 4 en paralelo: Extraer palabras clave
+precio, soporte, producto
+Superstep 5: Comprobar si existe historial
+Historial encontrado para este thread_id: ['Hola, buenas tardes. Quiero saber el precio de la licencia para 5 usuarios y si tienen demo disponible']
+Superstep 6: Crear ficha de usuario en función de los siguientes datos:
+
+        - Mensaje: Ya vi el precio, gracias. Ahora tengo un problema urgente con el acceso a la plataforma, no puedo entrar
+        - Resumen del mensaje: Vi el precio, gracias. Tengo un problema urgente con el acceso a la plataforma, no puedo...
+        - Palabras clave detectadas: precio, soporte, producto
+        - Urgencia detectada: Alta
+        - Historial: Historial previo del cliente:
+- Hola, buenas tardes. Quiero saber el precio de la licencia para 5 usuarios y si tienen demo disponible
+    
+FICHA DE CONTEXTO DEL CLIENTE
+
+ESTADO DEL CLIENTE:
+Urgencia: Alta
+Estado: Soporte técnico requerido
+
+RESUMEN DE LA SITUACIÓN:
+El cliente ha revisado la propuesta de precios enviada anteriormente. Actualmente, reporta un bloqueo crítico para acceder a la plataforma, lo cual impide su operativa.
+
+HISTORIAL DE INTERACCIÓN:
+- Consulta inicial: El cliente solicitó información sobre el precio de una licencia para 5 usuarios y consultó por la disponibilidad de una demo.
+- Estado actual: El cliente ha pasado de una fase de evaluación comercial a una incidencia técnica urgente.
+
+PALABRAS CLAVE:
+Precio, soporte, producto.
+
+RECOMENDACIÓN PARA EL AGENTE:
+Priorizar la resolución del problema de acceso antes de continuar con el seguimiento comercial. Una vez restablecido el acceso, confirmar si el cliente desea proceder con la demo solicitada inicialmente.
