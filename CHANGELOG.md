@@ -8,6 +8,17 @@ The project follows an educational version of [Semantic Versioning](https://semv
 - `MINOR`: a new concept, integration, or functional example.
 - `PATCH`: a bug fix, configuration adjustment, or documentation improvement.
 
+## [0.17.0] - Human-in-the-loop workflow and conditional routing
+
+### Added
+
+- Human-in-the-loop workflow in `langgraph-lab/gemini/human_in_the_loop.py` to pause execution and wait for explicit user approval.
+- Interactive user input handling with `input()` and LangGraph `interrupt()` to capture decisions such as approve, reject, or request edits.
+- Conditional branch routing through `add_conditional_edges(...)` to send the flow to send, cancel, or revision states.
+- Draft revision cycle with a controlled number of correction attempts before forcing a cancellation.
+- State management and persistence with `TypedDict`, checkpointing, and `SqliteSaver` to maintain the graph context across user responses.
+- Final customer-response flow that either sends the approved draft or exits without sending it.
+
 ## [0.16.0] - Persistent memory with SQLite database
 
 ### Added
