@@ -262,9 +262,9 @@ with SqliteSaver.from_conn_string(DB_FILE) as checkpointer:
     final_exec = hitl_graph.invoke(initial_input, config=config)
 
     while "__interrupt__" in final_exec:
-        pregunta = final_exec["__interrupt__"][0].value
+        informacion_usuario = final_exec["__interrupt__"][0].value
         print("\n--- El grafo necesita tu respuesta ---")
-        print(pregunta)
+        print(informacion_usuario)
 
         respuesta_usuario = input("\nTu respuesta: ")
 
