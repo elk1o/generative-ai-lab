@@ -1,64 +1,28 @@
 # Generative AI Lab
 
-This project contains practical Python examples for working with large language models. It focuses on API communication, environment configuration, prompt templates, and secure key management, with Google Gemini as the current provider.
+Generative AI Lab is a collection of practical Python examples that build from direct LLM API calls to complete retrieval, agent, and graph-based workflows. The lab uses OpenAI and Google Gemini, with LangChain, ChromaDB, and LangGraph for orchestration.
 
-The goal is to provide a clear and reproducible foundation for experimenting with generative AI and understanding how modern model integrations are consumed from code.
+Version `1.0.0` marks the first complete release of the lab. Each folder is a standalone learning example; generated `.txt` files preserve selected sample outputs.
 
-## Project overview
+## What is included
 
-This repository includes small examples that demonstrate:
+- Direct calls to OpenAI and Gemini APIs from Python and shell scripts.
+- LangChain prompt templates, LCEL chains, sequential workflows, structured output, and conversation history.
+- RAG workflows over PDF documents, including a multi-document ChromaDB collection.
+- Tool-using ReAct agents, including Google Calendar, weather, web search, Wikipedia, and Python examples.
+- LangGraph loops, conditional routing, fan-out/fan-in, human review, and SQLite-backed checkpoints.
+- A complete LangGraph customer-response workflow with intent routing, parallel analysis, a tool-using agent, and human approval/edit steps.
 
-- calling external AI APIs from Python
-- configuring credentials through environment variables
-- sending prompt-based requests to Gemini
-- composing prompts and models with LangChain's runnable pipeline
-- keeping configuration separate from application logic
+## Technology
 
-## Stack used
-
-TBD
+Python, LangChain, LangGraph, Google Gemini, OpenAI, ChromaDB, Pydantic, SQLite, `python-dotenv`, Google Calendar API, and HTTP APIs. The supported dependency ranges are listed in [requirements.txt](requirements.txt).
 
 ## Repository structure
 
+This tree lists the files tracked in the repository. Local credentials, virtual environments, generated databases, caches, and ignored documentation are not included.
+
 ```text
 .
-├── chroma_db/
-├── docs/
-│   ├── checklist.md
-│   ├── notas.txt
-│   └── roadmap.md
-├── langchain-lab/
-│   ├── chatGPT/
-│   │   └── main.py
-│   └── gemini/
-│   │   ├── main.py
-│   │   ├── prompt_templates.py
-│   │   ├── prompt_templates.txt
-│   │   ├── chains.py
-│   │   ├── chains.txt
-│   │   ├── sequential_chains.py
-│   │   ├── sequential_chains.txt
-│   │   ├── structured_output.py
-│   │   ├── structured_output.txt
-│   │   ├── memory.py
-│   │   └── memory.txt
-├── rag-lab/
-│   ├── data/
-│   │   ├── jokic_wikipedia.pdf
-│   │   ├── lideres_nba_25-26.pdf
-│   │   ├── season_review_25-26.pdf
-│   │   └── triples_dobles_sports_illustrated.pdf
-│   └── gemini/
-│       ├── loaders.py
-│       ├── embeddings.py
-│       ├── embeddings.txt
-│       ├── final_rag.py
-│       ├── final_rag.txt
-│       ├── multiple_sources_loaders.py
-│       ├── multiple_sources_embeddings.py
-│       ├── multiple_sources_embeddings.txt
-│       ├── multiple_sources_final_rag.py
-│       └── multiple_sources_final_rag.txt
 ├── agents-lab/
 │   └── gemini/
 │       ├── custom_tools/
@@ -70,6 +34,20 @@ TBD
 │           ├── react_agent.py
 │           ├── react_agent.txt
 │           └── react_agent_verbose.txt
+├── langchain-lab/
+│   ├── chatGPT/
+│   │   └── main.py
+│   └── gemini/
+│       ├── chains.py
+│       ├── chains.txt
+│       ├── memory.py
+│       ├── memory.txt
+│       ├── prompt_templates.py
+│       ├── prompt_templates.txt
+│       ├── sequential_chains.py
+│       ├── sequential_chains.txt
+│       ├── structured_output.py
+│       └── structured_output.txt
 ├── langgraph-lab/
 │   └── gemini/
 │       ├── basic_langchain.py
@@ -77,6 +55,7 @@ TBD
 │       ├── fan_out_fan_in.txt
 │       ├── final_graph/
 │       │   ├── constants.py
+│       │   ├── graph.png
 │       │   ├── graph.py
 │       │   ├── main.py
 │       │   ├── nodes.py
@@ -97,141 +76,123 @@ TBD
 │   │   ├── main.sh
 │   │   └── response.txt
 │   └── gemini/
-│   │   ├── main.py
-│   │   ├── main.sh
-│   │   └── response.txt
-├── README.md
-├── .gitignore
+│       ├── main.py
+│       ├── main.sh
+│       └── response.txt
+├── rag-lab/
+│   ├── data/
+│   │   ├── jokic_wikipedia.pdf
+│   │   ├── lideres_nba_25-26.pdf
+│   │   ├── season_review_25-26.pdf
+│   │   └── triples_dobles_sports_illustrated.pdf
+│   └── gemini/
+│       ├── embeddings.py
+│       ├── embeddings.txt
+│       ├── final_rag.py
+│       ├── final_rag.txt
+│       ├── loaders.py
+│       ├── multiple_sources_embeddings.py
+│       ├── multiple_sources_embeddings.txt
+│       ├── multiple_sources_final_rag.py
+│       ├── multiple_sources_final_rag.txt
+│       └── multiple_sources_loaders.py
 ├── .env_example
+├── .gitignore
 ├── CHANGELOG.md
 ├── LICENSE
+├── README.md
 └── requirements.txt
 ```
 
-## Project history and versioning
+## Getting started
 
-The project's learning milestones and relevant changes are recorded in the [CHANGELOG](CHANGELOG.md). It uses `0.x` versions while the laboratory is evolving: minor versions represent a new AI concept or integration, and patch versions represent fixes or documentation updates.
-
-## Dependencies
-
-The project dependencies are listed in `requirements.txt`-
-
-Install dependencies with:
+Use Python 3.10 or newer, then create and activate a virtual environment from the repository root and install the dependencies:
 
 ```bash
-pip install -r requirements.txt
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
 ```
 
-## Environment configuration
+On Windows PowerShell, activate the environment with `.venv\Scripts\Activate.ps1`.
 
-API keys should never be stored directly in source code. The project uses `python-dotenv` to load credentials from a local `.env` file and keep them out of version control. There is an .env_example on project root.
+Copy `.env_example` to `.env` and replace the placeholders with credentials for the examples you plan to run. The examples load environment variables with `python-dotenv`; do not commit `.env`, API keys, OAuth credentials, or generated token files.
 
-### Security practices
+Common settings in `.env_example` include:
 
-- Keep `.env` files local and never commit them to GitHub
-- Never remove `.env` from `.gitignore`
-- Use separate credentials for local development and production
-- Rotate keys periodically
-- Avoid logging sensitive values or printing tokens in terminal output
+- `AISTUDIO_APIKEY` for Gemini examples.
+- `OPENAI_API_KEY` for OpenAI examples.
+- `BALL_DONT_LIE_APIKEY` for the Ball Don't Lie API example.
+- `RAG_DATA_PATH`, `SQLITE_DISK_DIRECTORY`, `COLLECTION_NAME`, `MULTIPLE_SOURCES_COLLECTION_NAME`, and `CHROMADB_EMBEDDINGS_MODEL` for RAG examples.
+- `DB_FILE` for LangGraph SQLite checkpoints.
 
-There is a .gitignore included on project root.
+The OpenAI shell wrapper reads `OPENAI_APIKEY`; set it to the same value as `OPENAI_API_KEY` in `.env` when running `llms-lab/chatGPT/main.sh`.
 
-## Usage
+The custom-tools Google Calendar example also requires a Google OAuth client file named `credentials.json` in the repository root. It creates `token.json` during authorization. Both files contain credentials and must remain local.
 
-Activate the virtual environment and install the dependencies from the project root:
+## Running examples
 
-```bash
-source venv/bin/activate
-pip install -r requirements.txt
-```
+Run commands from the repository root after setting up the environment. LLM-backed examples require network access and may incur provider API charges.
 
-### LLM
+### LLM API calls
 
 ```bash
-python llms-lab/chatGPT/main.py > llms-lab/chatGPT/response.txt
+python llms-lab/chatGPT/main.py
+python llms-lab/gemini/main.py
 bash llms-lab/chatGPT/main.sh
-python llms-lab/gemini/main.py > llms-lab/gemini/response.txt
 bash llms-lab/gemini/main.sh
 ```
 
-### Langchain
+### LangChain
 
 ```bash
-python langchain-lab/chatGPT/main.py > langchain-lab/chatGPT/response.txt
-python langchain-lab/gemini/prompt_templates.py > langchain-lab/gemini/prompt_templates.txt
-python langchain-lab/gemini/chains.py > langchain-lab/gemini/chains.txt
-python langchain-lab/gemini/sequential_chains.py > langchain-lab/gemini/sequential_chains.txt
-python langchain-lab/gemini/structured_output.py > langchain-lab/gemini/structured_output.txt
-python langchain-lab/gemini/memory.py > langchain-lab/gemini/memory.txt
+python langchain-lab/chatGPT/main.py
+python langchain-lab/gemini/prompt_templates.py
+python langchain-lab/gemini/chains.py
+python langchain-lab/gemini/sequential_chains.py
+python langchain-lab/gemini/structured_output.py
+python langchain-lab/gemini/memory.py
 ```
 
 ### RAG
 
-```bash
-python rag-lab/gemini/embeddings.py > rag-lab/gemini/embeddings.txt
-python rag-lab/gemini/final_rag.py > rag-lab/gemini/final_rag.txt
+The embedding examples index the included PDFs in ChromaDB. Run an indexing example before its corresponding RAG query example.
 
-python rag-lab/gemini/multiple_sources_embeddings.py > rag-lab/gemini/multiple_sources_embeddings.txt
-python rag-lab/gemini/multiple_sources_final_rag.py > rag-lab/gemini/multiple_sources_final_rag.txt
+```bash
+python rag-lab/gemini/embeddings.py
+python rag-lab/gemini/final_rag.py
+python rag-lab/gemini/multiple_sources_embeddings.py
+python rag-lab/gemini/multiple_sources_final_rag.py
 ```
 
 ### Agents
 
+The custom-tools example uses Google Calendar OAuth in addition to the Gemini key.
+
 ```bash
-python agents-lab/gemini/multitools/react_agent.py > agents-lab/gemini/multitools/react_agent.txt
-python agents-lab/gemini/custom_tools/custom_tools_agent.py > agents-lab/gemini/custom_tools/custom_tools_agent.txt
+python agents-lab/gemini/multitools/react_agent.py
+python agents-lab/gemini/custom_tools/custom_tools_agent.py
 ```
 
 ### LangGraph
+
+The human-in-the-loop and complete-graph examples are interactive and wait for responses in the terminal. Reuse the same thread ID in the memory example to continue a conversation across runs.
+
 ```bash
-python langgraph-lab/gemini/loop_langgraph.py > langgraph-lab/gemini/loop_langgraph.txt
-python langgraph-lab/gemini/manual_react_agent.py > langgraph-lab/gemini/manual_react_agent.txt
-'Fan out - fan in':
-python langgraph-lab/gemini/fan_out_fan_in.py > langgraph-lab/gemini/fan_out_fan_in.txt
-'History':
-python langgraph-lab/gemini/history.py > langgraph-lab/gemini/history.txt
-'Memoria 1ª ejecución:'
-python langgraph-lab/gemini/memory.py "Hola, buenas tardes. Quiero saber el precio de la licencia para 5 usuarios y si tienen demo disponible" "client-1" > langgraph-lab/gemini/memory_exec_1.txt
-'Memoria 2ª ejecución:'
-python langgraph-lab/gemini/memory.py "Ya vi el precio, gracias. Ahora tengo un problema urgente con el acceso a la plataforma, no puedo entrar" "client-1" > langgraph-lab/gemini/memory_exec_2.txt
-'Memoria 3ª ejecución:'
-python langgraph-lab/gemini/memory.py "Buenas, llevo dos días respuesta sobre el problema de acceso. Es inadmisible. Si no se soluciona hoy mismo me iré a la competencia" "client-1" > langgraph-lab/gemini/memory_exec_3.txt
-'Human in the loop'
+python langgraph-lab/gemini/loop_langgraph.py
+python langgraph-lab/gemini/manual_react_agent.py
+python langgraph-lab/gemini/fan_out_fan_in.py
 python langgraph-lab/gemini/human_in_the_loop.py
-'Final graph'
+python langgraph-lab/gemini/memory.py "What plans do you offer?" "client-1"
+python langgraph-lab/gemini/memory.py "Can you remind me what I asked?" "client-1"
 python langgraph-lab/gemini/final_graph/main.py
 ```
 
-## Why this project is relevant
+The complete graph writes its rendered diagram to `graph.png` in the current working directory. LangGraph checkpoint databases and ChromaDB data are local runtime artifacts.
 
-This repository documents a practical progression from direct LLM API calls to reusable LangChain workflows. It records how providers are configured, how models are called from Python, and how increasingly complex AI features are composed step by step while keeping credentials outside the source code.
+## Project status and versioning
 
-The project demonstrates:
-
-- Direct integration with OpenAI and Google Gemini APIs.
-- Python and shell-based API usage, including `curl` examples.
-- Environment-based configuration with `python-dotenv`.
-- Secure API-key management through `.env` and `.gitignore`.
-- LangChain model wrappers for working with Gemini and OpenAI.
-- Reusable prompt templates with single and multiple variables.
-- Basic LCEL chains that compose prompts and models with the `|` operator.
-- API-enriched chains that add external data to an LLM prompt.
-- Sequential chains that pass the output of one model call into another.
-- Structured output validated with Pydantic models.
-- Conversation memory using message histories and contextual follow-up questions.
-
-Together, these examples establish the fundamentals needed to evolve towards more advanced workflows such as RAG, tool-using agents, and AI-powered backend services.
-
-## Future improvements
-
-The next stage of the roadmap is to apply the LangChain foundations to more advanced AI workflows:
-
-- RAG (Retrieval-Augmented Generation): load documents, split text into chunks, generate embeddings, and store them in a vector database such as ChromaDB.
-- Build a complete RAG workflow that answers questions using project-specific documents.
-- Experiment with chunking and retrieval strategies to improve response accuracy.
-- Build agents with tools and function calling, including workflows that combine multiple tools.
-- Expose an AI workflow through a small backend or REST API using FastAPI.
-- Add error handling, retries, testing, and deployment-ready configuration patterns.
+The learning lab is complete at version `1.0.0`. The examples and release history are documented in the [CHANGELOG](CHANGELOG.md). The changelog records the earlier `0.x` milestones and the first complete `1.0.0` release.
 
 ## Author
 
@@ -239,6 +200,4 @@ elk1o.dev@gmail.com
 
 ## License
 
-This project is licensed under the MIT License. Full details are available in the [LICENSE](LICENSE) file included in this repository.
-
-The license governs reuse, modification, and distribution of the code and is documented in the project root for reference.
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.

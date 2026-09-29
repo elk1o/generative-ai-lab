@@ -2,22 +2,26 @@
 
 All relevant changes to this project are documented in this file.
 
-The project follows an educational version of [Semantic Versioning](https://semver.org/):
+The project follows [Semantic Versioning](https://semver.org/):
 
-- `MAJOR`: a change in direction or an incompatible reorganization of the lab.
-- `MINOR`: a new concept, integration, or functional example.
-- `PATCH`: a bug fix, configuration adjustment, or documentation improvement.
+- `MAJOR`: incompatible changes to a stable release.
+- `MINOR`: backwards-compatible functionality added to a stable release.
+- `PATCH`: backwards-compatible fixes and documentation improvements.
 
-## [0.17.0] - Human-in-the-loop workflow and conditional routing
+## [1.0.0] - Complete Generative AI learning lab
 
 ### Added
 
-- Human-in-the-loop workflow in `langgraph-lab/gemini/human_in_the_loop.py` to pause execution and wait for explicit user approval.
-- Interactive user input handling with `input()` and LangGraph `interrupt()` to capture decisions such as approve, reject, or request edits.
-- Conditional branch routing through `add_conditional_edges(...)` to send the flow to send, cancel, or revision states.
-- Draft revision cycle with a controlled number of correction attempts before forcing a cancellation.
-- State management and persistence with `TypedDict`, checkpointing, and `SqliteSaver` to maintain the graph context across user responses.
-- Final customer-response flow that either sends the approved draft or exits without sending it.
+- First stable release bringing together direct OpenAI and Gemini API calls, LangChain workflows, RAG, tool-using agents, and LangGraph examples.
+- Complete LangGraph customer-response workflow combining intent routing, parallel message analysis, a ReAct agent with custom tools, human review, bounded edits, and SQLite checkpoints.
+- Finalized project documentation, setup instructions, example commands, repository inventory, and release history.
+
+### Included
+
+- Prompt templates, LCEL chains, sequential composition, structured output, and conversation history.
+- Single-source and multi-source PDF retrieval workflows using embeddings and ChromaDB.
+- ReAct agents with web, Wikipedia, Python, calendar, and weather tools.
+- LangGraph loops, conditional edges, fan-out/fan-in, human-in-the-loop pauses, and persistent thread-based memory.
 
 ## [0.18.0] - Complete LangGraph workflow with ReAct agent and tools
 
@@ -29,6 +33,17 @@ The project follows an educational version of [Semantic Versioning](https://semv
 - Parallel sales analysis for urgency detection, keyword extraction, and message summarization before generating the response.
 - ReAct agent using `search_AI_training` and `calculate_budget` tools to select a training program and calculate an indicative budget.
 - SQLite graph checkpointing with `SqliteSaver` to preserve execution state and resume after user input, plus limits on request and draft edit attempts.
+
+## [0.17.0] - Human-in-the-loop workflow and conditional routing
+
+### Added
+
+- Human-in-the-loop workflow in `langgraph-lab/gemini/human_in_the_loop.py` to pause execution and wait for explicit user approval.
+- Interactive user input handling with `input()` and LangGraph `interrupt()` to capture decisions such as approve, reject, or request edits.
+- Conditional branch routing through `add_conditional_edges(...)` to send the flow to send, cancel, or revision states.
+- Draft revision cycle with a controlled number of correction attempts before forcing a cancellation.
+- State management and persistence with `TypedDict`, checkpointing, and `SqliteSaver` to maintain the graph context across user responses.
+- Final customer-response flow that either sends the approved draft or exits without sending it.
 
 ## [0.16.0] - Persistent memory with SQLite database
 
@@ -90,13 +105,13 @@ The project follows an educational version of [Semantic Versioning](https://semv
 ### Added
 
 - ReAct agent in `react_agent.py` using Gemini and LangChain.
-- Custom ReAct prompt template in `react_agent_template.py`.
+- Custom ReAct prompt template in `agents-lab/gemini/multitools/agent_template.py`.
 - Python REPL tool for executing Python code when needed.
 - Wikipedia tool for querying information about people, countries, and topics.
 - DuckDuckGo search tool for retrieving information from the internet.
 - `AgentExecutor` configuration with verbose execution, parsing error handling, and a maximum of five iterations.
 - Example questions covering general knowledge, current information, and Fibonacci sequence generation.
-- Output saved to `agents-lab/gemini/multitool/react_agent.txt`.
+- Output saved to `agents-lab/gemini/multitools/react_agent.txt`.
 
 ## [0.10.0] - Multi-source RAG
 
