@@ -19,6 +19,17 @@ The project follows an educational version of [Semantic Versioning](https://semv
 - State management and persistence with `TypedDict`, checkpointing, and `SqliteSaver` to maintain the graph context across user responses.
 - Final customer-response flow that either sends the approved draft or exits without sending it.
 
+## [0.18.0] - Complete LangGraph workflow with ReAct agent and tools
+
+### Added
+
+- Complete customer-service and sales workflow in `langgraph-lab/gemini/final_graph/`, organized into graph, node, state, tool, and configuration modules.
+- Intent-based conditional routing for sales, support, and general inquiries.
+- Human-in-the-loop checkpoints to review or edit the initial request and approve, reject, or request edits to the generated draft.
+- Parallel sales analysis for urgency detection, keyword extraction, and message summarization before generating the response.
+- ReAct agent using `search_AI_training` and `calculate_budget` tools to select a training program and calculate an indicative budget.
+- SQLite graph checkpointing with `SqliteSaver` to preserve execution state and resume after user input, plus limits on request and draft edit attempts.
+
 ## [0.16.0] - Persistent memory with SQLite database
 
 ### Added

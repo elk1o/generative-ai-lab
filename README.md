@@ -75,6 +75,13 @@ TBD
 │       ├── basic_langchain.py
 │       ├── fan_out_fan_in.py
 │       ├── fan_out_fan_in.txt
+│       ├── final_graph/
+│       │   ├── constants.py
+│       │   ├── graph.py
+│       │   ├── main.py
+│       │   ├── nodes.py
+│       │   ├── state.py
+│       │   └── tools.py
 │       ├── human_in_the_loop.py
 │       ├── loop_langgraph.py
 │       ├── loop_langgraph.txt
@@ -191,6 +198,8 @@ python langgraph-lab/gemini/memory.py "Ya vi el precio, gracias. Ahora tengo un 
 python langgraph-lab/gemini/memory.py "Buenas, llevo dos días respuesta sobre el problema de acceso. Es inadmisible. Si no se soluciona hoy mismo me iré a la competencia" "client-1" > langgraph-lab/gemini/memory_exec_3.txt
 'Human in the loop'
 python langgraph-lab/gemini/human_in_the_loop.py
+'Final graph'
+python langgraph-lab/gemini/final_graph/main.py
 ```
 
 ## Why this project is relevant
